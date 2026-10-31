@@ -608,14 +608,15 @@
             <p class="mt-2 text-gray-600">It takes less than a minute.</p>
 
             <!-- ============================================================
-                 FORM SUBMISSION
-                 This page has no server, so set the form's "action" to a form service, e.g.:
-                   • Formspree:     action="https://formspree.io/f/YOUR_FORM_ID"  method="POST"
-                   • Netlify Forms: add  data-netlify="true"  name="zocf-membership"
-                 While action="#" is left in place, the script at the bottom shows a thank-you
-                 message without sending data anywhere.
+                 FORM SUBMISSION — connected to Formspree (form xnppbrny).
+                 Registrations are emailed to the address set in the Formspree dashboard.
+                 The script at the bottom sends the form in the background and shows the
+                 "Welcome home!" message, so visitors stay on this page.
                  ============================================================ -->
-            <form id="joinForm" action="#" method="POST" class="mt-8 space-y-5" novalidate>
+            <form id="joinForm" action="https://formspree.io/f/xnppbrny" method="POST" class="mt-8 space-y-5" novalidate>
+              <!-- Formspree: registrations are emailed to zocfleaders@gmail.com. Subject line + spam trap below. -->
+              <input type="hidden" name="_subject" value="New ZOCF membership registration" />
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
               <div>
                 <label for="name" class="mb-1.5 block text-sm font-semibold text-gray-800">Full name</label>
                 <input id="name" name="name" type="text" autocomplete="name" required placeholder="e.g. Chanda Mwila" class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100" />
@@ -779,13 +780,18 @@
         }
         // Backend configured → submit via fetch so the visitor stays on the page
         e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const label = btn.textContent;
+        btn.disabled = true; btn.textContent = 'Sending…'; btn.classList.add('opacity-70');
         try {
           const res = await fetch(action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
           if (!res.ok) throw new Error();
           form.classList.add('hidden'); success.classList.remove('hidden');
         } catch {
-          error.textContent = 'Sorry, something went wrong. Please try again.';
+          error.textContent = 'Sorry, something went wrong. Please try again, or email contact@zocf.org.';
           error.classList.remove('hidden');
+        } finally {
+          btn.disabled = false; btn.textContent = label; btn.classList.remove('opacity-70');
         }
       });
     })();
