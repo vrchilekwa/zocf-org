@@ -229,7 +229,7 @@
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
               </span>
               <div>
-                <p class="text-xs font-semibold uppercase tracking-widest text-amber-300">Now Playing</p>
+                <p class="text-xs font-semibold uppercase tracking-widest text-amber-300">Watch on YouTube</p>
                 <h3 class="text-xl font-bold text-white">ZOCF News Group Channel</h3>
               </div>
             </div>
@@ -241,7 +241,7 @@
                    TO CHANGE THE VIDEO: open the video on YouTube, copy the 11-character ID at the end of
                    its link (youtu.be/XXXXXXXXXXX or watch?v=XXXXXXXXXXX) and replace W5OzLzw2OQk below.
                    The video must be Public (or Unlisted) with "Allow embedding" ticked in YouTube Studio. -->
-              <iframe class="absolute inset-0 h-full w-full"
+              <iframe id="ytMain" class="absolute inset-0 h-full w-full"
                       src="https://www.youtube.com/embed/W5OzLzw2OQk?rel=0"
                       title="ZOCF Zambia 62nd Independence Celebration"
                       frameborder="0"
@@ -252,9 +252,51 @@
               <!-- ▲▲▲ END YOUTUBE EMBED ▲▲▲ -->
             </div>
 
+            <!-- ============================================================
+                 ▼▼▼ TOP VIDEOS — thumbnail strip ▼▼▼
+                 Five thumbnails under the main player. Clicking one plays it in the main player above.
+                 TO ADD / CHANGE A VIDEO: on each <button> below set
+                   data-video-id = the 11 characters at the end of the YouTube link (youtu.be/XXXXXXXXXXX)
+                   data-title    = the title to show under the thumbnail
+                 Thumbnails are loaded from YouTube automatically. Tiles left empty show a "coming soon" card.
+                 ============================================================ -->
+            <div class="border-t border-gray-100 px-6 pb-2 pt-5">
+              <div class="mb-3 flex items-center justify-between gap-4">
+                <h4 class="text-sm font-bold uppercase tracking-wider text-emerald-900">Top Videos</h4>
+                <a href="https://www.youtube.com/@ZOCFNewsGroup/videos" target="_blank" rel="noopener" class="text-sm font-semibold text-emerald-700 hover:text-emerald-900">View all on YouTube →</a>
+              </div>
+              <ul id="ytThumbs" class="-mx-1 flex snap-x gap-3 overflow-x-auto px-1 pb-3 lg:grid lg:grid-cols-5 lg:overflow-visible" aria-label="Top ZOCF News Group videos">
+                <!-- VIDEO 1: paste the 11-character video ID into data-video-id and the title into data-title -->
+                <li class="w-40 shrink-0 snap-start lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="W5OzLzw2OQk" data-title="ZOCF Zambia 62nd Independence Celebration"></button>
+                </li>
+                <!-- VIDEO 2: paste the 11-character video ID into data-video-id and the title into data-title -->
+                <li class="w-40 shrink-0 snap-start lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                </li>
+                <!-- VIDEO 3: paste the 11-character video ID into data-video-id and the title into data-title -->
+                <li class="w-40 shrink-0 snap-start lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                </li>
+                <!-- VIDEO 4: paste the 11-character video ID into data-video-id and the title into data-title -->
+                <li class="w-40 shrink-0 snap-start lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                </li>
+                <!-- VIDEO 5: paste the 11-character video ID into data-video-id and the title into data-title -->
+                <li class="w-40 shrink-0 snap-start lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                </li>
+              </ul>
+            </div>
+            <!-- ▲▲▲ END TOP VIDEOS ▲▲▲ -->
+
             <!-- Description banner -->
             <div class="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-              <p class="text-gray-600">Sermons, testimonies, community news and event highlights from Zambians around the world.</p>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-amber-600">Now playing</p>
+                <p id="ytNowTitle" class="font-semibold text-gray-900">ZOCF Zambia 62nd Independence Celebration</p>
+                <p class="mt-1 text-sm text-gray-600">Sermons, testimonies, community news and event highlights from Zambians around the world.</p>
+              </div>
                             <a href="https://www.youtube.com/channel/UCqJJr6t9rDsw5E_UCd2PdrQ?sub_confirmation=1" target="_blank" rel="noopener" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-red-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700">
                 Subscribe
               </a>
@@ -673,6 +715,62 @@
       }
       render();
       let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(render, 300); });
+    })();
+
+    // YouTube "Top Videos" strip: build each thumbnail from its data-video-id, and play it in the main player on click
+    (function () {
+      const player = document.getElementById('ytMain');
+      const nowTitle = document.getElementById('ytNowTitle');
+      const buttons = document.querySelectorAll('.yt-thumb');
+      if (!player || !buttons.length) return;
+      const playIcon = '<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 001.5.86l11-6.86a1 1 0 000-1.72l-11-6.86A1 1 0 008 5.14z"/></svg>';
+      const esc = (t) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+      function setActive(btn) {
+        buttons.forEach((b) => {
+          const frame = b.querySelector('.yt-frame');
+          if (!frame) return;
+          const on = b === btn;
+          frame.classList.toggle('ring-4', on);
+          frame.classList.toggle('ring-amber-400', on);
+          b.setAttribute('aria-pressed', String(on));
+        });
+      }
+
+      buttons.forEach((btn) => {
+        const id = (btn.dataset.videoId || '').trim();
+        const title = (btn.dataset.title || '').trim() || 'ZOCF News Group video';
+        if (!id) {
+          // Empty slot → branded "coming soon" card
+          btn.disabled = true;
+          btn.classList.add('cursor-default');
+          btn.innerHTML =
+            '<span class="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 text-amber-300">' +
+              '<span class="pattern-chitenge absolute inset-0"></span><span class="relative">' + playIcon + '</span></span>' +
+            '<span class="mt-2 block text-xs font-medium text-gray-400">More videos coming soon</span>';
+          return;
+        }
+        btn.setAttribute('aria-label', 'Play: ' + title);
+        btn.innerHTML =
+          '<span class="yt-frame relative block aspect-video w-full overflow-hidden rounded-xl bg-gray-900 shadow-sm transition">' +
+            '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(id) + '/mqdefault.jpg" alt="" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />' +
+            '<span class="absolute inset-0 flex items-center justify-center bg-black/20 transition group-hover:bg-black/40">' +
+              '<span class="flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-white shadow-lg transition group-hover:scale-110">' + playIcon + '</span>' +
+            '</span>' +
+          '</span>' +
+          '<span class="mt-2 block text-xs font-semibold leading-snug text-gray-800 line-clamp-2 group-hover:text-emerald-800">' + esc(title) + '</span>';
+        btn.addEventListener('click', () => {
+          player.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?rel=0&autoplay=1';
+          player.title = title;
+          if (nowTitle) nowTitle.textContent = title;
+          setActive(btn);
+          player.closest('.aspect-video').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      });
+
+      // Highlight the tile matching the video loaded in the main player
+      const current = (player.src.match(/embed\/([^?&]+)/) || [])[1];
+      buttons.forEach((b) => { if (b.dataset.videoId === current) setActive(b); });
     })();
 
     // Keep copyright year current
