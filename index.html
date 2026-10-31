@@ -254,7 +254,7 @@
 
             <!-- ============================================================
                  ▼▼▼ TOP VIDEOS — thumbnail strip ▼▼▼
-                 Five thumbnails under the main player. Clicking one plays it in the main player above.
+                 Six thumbnails under the main player, in the order listed. Clicking one plays it in the main player above.
                  TO ADD / CHANGE A VIDEO: on each <button> below set
                    data-video-id = the 11 characters at the end of the YouTube link (youtu.be/XXXXXXXXXXX)
                    data-title    = the title to show under the thumbnail
@@ -265,26 +265,30 @@
                 <h4 class="text-sm font-bold uppercase tracking-wider text-emerald-900">Top Videos</h4>
                 <a href="https://www.youtube.com/@ZOCFNewsGroup/videos" target="_blank" rel="noopener" class="text-sm font-semibold text-emerald-700 hover:text-emerald-900">View all on YouTube →</a>
               </div>
-              <ul id="ytThumbs" class="-mx-1 flex snap-x gap-3 overflow-x-auto px-1 pb-3 lg:grid lg:grid-cols-5 lg:overflow-visible" aria-label="Top ZOCF News Group videos">
-                <!-- VIDEO 1: paste the 11-character video ID into data-video-id and the title into data-title -->
-                <li class="w-40 shrink-0 snap-start lg:w-auto">
-                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="W5OzLzw2OQk" data-title="ZOCF Zambia 62nd Independence Celebration"></button>
+              <ul id="ytThumbs" class="-mx-1 flex snap-x gap-4 overflow-x-auto px-1 pb-3 lg:grid lg:grid-cols-3 lg:overflow-visible" aria-label="Top ZOCF News Group videos">
+                <!-- VIDEO 1: https://youtu.be/vo9U5DIfbYw (title loads from YouTube automatically; type one into data-title to override) -->
+                <li class="w-40 shrink-0 snap-start sm:w-48 lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="vo9U5DIfbYw" data-title=""></button>
                 </li>
-                <!-- VIDEO 2: paste the 11-character video ID into data-video-id and the title into data-title -->
-                <li class="w-40 shrink-0 snap-start lg:w-auto">
-                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                <!-- VIDEO 2: https://youtu.be/MJddMnIS2Qs (title loads from YouTube automatically; type one into data-title to override) -->
+                <li class="w-40 shrink-0 snap-start sm:w-48 lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="MJddMnIS2Qs" data-title=""></button>
                 </li>
-                <!-- VIDEO 3: paste the 11-character video ID into data-video-id and the title into data-title -->
-                <li class="w-40 shrink-0 snap-start lg:w-auto">
-                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                <!-- VIDEO 3: https://youtu.be/dhxkrFm_FEw (title loads from YouTube automatically; type one into data-title to override) -->
+                <li class="w-40 shrink-0 snap-start sm:w-48 lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="dhxkrFm_FEw" data-title=""></button>
                 </li>
-                <!-- VIDEO 4: paste the 11-character video ID into data-video-id and the title into data-title -->
-                <li class="w-40 shrink-0 snap-start lg:w-auto">
-                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                <!-- VIDEO 4: https://youtu.be/Jta18os08DQ (title loads from YouTube automatically; type one into data-title to override) -->
+                <li class="w-40 shrink-0 snap-start sm:w-48 lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="Jta18os08DQ" data-title=""></button>
                 </li>
-                <!-- VIDEO 5: paste the 11-character video ID into data-video-id and the title into data-title -->
-                <li class="w-40 shrink-0 snap-start lg:w-auto">
-                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="" data-title=""></button>
+                <!-- VIDEO 5: https://youtu.be/G8yLthJqd48 (title loads from YouTube automatically; type one into data-title to override) -->
+                <li class="w-40 shrink-0 snap-start sm:w-48 lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="G8yLthJqd48" data-title=""></button>
+                </li>
+                <!-- VIDEO 6: https://youtu.be/yj7avNMsv7Q (title loads from YouTube automatically; type one into data-title to override) -->
+                <li class="w-40 shrink-0 snap-start sm:w-48 lg:w-auto">
+                  <button type="button" class="yt-thumb group block w-full text-left" data-video-id="yj7avNMsv7Q" data-title=""></button>
                 </li>
               </ul>
             </div>
@@ -739,7 +743,7 @@
 
       buttons.forEach((btn) => {
         const id = (btn.dataset.videoId || '').trim();
-        const title = (btn.dataset.title || '').trim() || 'ZOCF News Group video';
+        let title = (btn.dataset.title || '').trim() || 'ZOCF News Group video';
         if (!id) {
           // Empty slot → hide it, so only real videos are shown
           btn.closest('li').remove();
@@ -754,6 +758,18 @@
             '</span>' +
           '</span>' +
           '<span class="mt-2 block text-xs font-semibold leading-snug text-gray-800 line-clamp-2 group-hover:text-emerald-800">' + esc(title) + '</span>';
+        // No title typed in? Ask YouTube for it (oEmbed) and fill it in.
+        if (!(btn.dataset.title || '').trim()) {
+          fetch('https://www.youtube.com/oembed?format=json&url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + id))
+            .then((r) => (r.ok ? r.json() : Promise.reject()))
+            .then((d) => {
+              if (!d || !d.title) return;
+              title = d.title;
+              btn.querySelector('.line-clamp-2').textContent = title;
+              btn.setAttribute('aria-label', 'Play: ' + title);
+            })
+            .catch(() => {});
+        }
         btn.addEventListener('click', () => {
           player.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?rel=0&autoplay=1';
           player.title = title;
