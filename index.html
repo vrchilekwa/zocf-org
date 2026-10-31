@@ -258,7 +258,7 @@
                  TO ADD / CHANGE A VIDEO: on each <button> below set
                    data-video-id = the 11 characters at the end of the YouTube link (youtu.be/XXXXXXXXXXX)
                    data-title    = the title to show under the thumbnail
-                 Thumbnails are loaded from YouTube automatically. Tiles left empty show a "coming soon" card.
+                 Thumbnails are loaded from YouTube automatically. Tiles left empty are hidden automatically.
                  ============================================================ -->
             <div class="border-t border-gray-100 px-6 pb-2 pt-5">
               <div class="mb-3 flex items-center justify-between gap-4">
@@ -741,13 +741,8 @@
         const id = (btn.dataset.videoId || '').trim();
         const title = (btn.dataset.title || '').trim() || 'ZOCF News Group video';
         if (!id) {
-          // Empty slot → branded "coming soon" card
-          btn.disabled = true;
-          btn.classList.add('cursor-default');
-          btn.innerHTML =
-            '<span class="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-700 text-amber-300">' +
-              '<span class="pattern-chitenge absolute inset-0"></span><span class="relative">' + playIcon + '</span></span>' +
-            '<span class="mt-2 block text-xs font-medium text-gray-400">More videos coming soon</span>';
+          // Empty slot → hide it, so only real videos are shown
+          btn.closest('li').remove();
           return;
         }
         btn.setAttribute('aria-label', 'Play: ' + title);
