@@ -160,6 +160,78 @@
     <!-- =====================================================================
          CORE PILLARS
          ===================================================================== -->
+    <!-- =====================================================================
+         VIDEO STRIP — horizontal row of ZOCF News Group videos, right under the hero
+         TO ADD / CHANGE / REORDER: edit the <li> items below. data-video-id = the 11 characters at the
+         end of the YouTube link (youtu.be/XXXXXXXXXXX). data-title is optional — leave it empty and the
+         title loads from YouTube automatically. Clicking a thumbnail opens the video in a pop-up player.
+         ===================================================================== -->
+    <section aria-labelledby="videoStripTitle" class="relative overflow-hidden bg-emerald-950 py-10 text-white">
+      <div class="pattern-chitenge absolute inset-0 opacity-60" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-5 flex items-end justify-between gap-4">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-amber-300">ZOCF News Group</p>
+            <h2 id="videoStripTitle" class="mt-1 text-2xl font-bold sm:text-3xl">Watch Our Story</h2>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="https://www.youtube.com/channel/UCqJJr6t9rDsw5E_UCd2PdrQ" target="_blank" rel="noopener" class="mr-2 hidden text-sm font-semibold text-amber-300 hover:text-amber-200 sm:inline">View all on YouTube →</a>
+            <button type="button" id="vidPrev" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 transition hover:bg-amber-400 hover:text-emerald-950" aria-label="Scroll videos left">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button type="button" id="vidNext" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 transition hover:bg-amber-400 hover:text-emerald-950" aria-label="Scroll videos right">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+        <ul id="vidStrip" class="-mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-1 pb-4 [scrollbar-width:thin]" aria-label="ZOCF videos">
+          <!-- VIDEO 1: https://youtu.be/W5OzLzw2OQk -->
+          <li class="w-64 shrink-0 snap-start sm:w-72">
+            <button type="button" class="home-vid group block w-full text-left" data-video-id="W5OzLzw2OQk" data-title="ZOCF Zambia 62nd Independence Celebration"></button>
+          </li>
+          <!-- VIDEO 2: https://youtu.be/vo9U5DIfbYw -->
+          <li class="w-64 shrink-0 snap-start sm:w-72">
+            <button type="button" class="home-vid group block w-full text-left" data-video-id="vo9U5DIfbYw" data-title=""></button>
+          </li>
+          <!-- VIDEO 3: https://youtu.be/MJddMnIS2Qs -->
+          <li class="w-64 shrink-0 snap-start sm:w-72">
+            <button type="button" class="home-vid group block w-full text-left" data-video-id="MJddMnIS2Qs" data-title=""></button>
+          </li>
+          <!-- VIDEO 4: https://youtu.be/dhxkrFm_FEw -->
+          <li class="w-64 shrink-0 snap-start sm:w-72">
+            <button type="button" class="home-vid group block w-full text-left" data-video-id="dhxkrFm_FEw" data-title=""></button>
+          </li>
+          <!-- VIDEO 5: https://youtu.be/Jta18os08DQ -->
+          <li class="w-64 shrink-0 snap-start sm:w-72">
+            <button type="button" class="home-vid group block w-full text-left" data-video-id="Jta18os08DQ" data-title=""></button>
+          </li>
+          <!-- VIDEO 6: https://youtu.be/G8yLthJqd48 -->
+          <li class="w-64 shrink-0 snap-start sm:w-72">
+            <button type="button" class="home-vid group block w-full text-left" data-video-id="G8yLthJqd48" data-title=""></button>
+          </li>
+          <!-- VIDEO 7: https://youtu.be/yj7avNMsv7Q -->
+          <li class="w-64 shrink-0 snap-start sm:w-72">
+            <button type="button" class="home-vid group block w-full text-left" data-video-id="yj7avNMsv7Q" data-title=""></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pop-up video player used by the video strip (native <dialog>, no libraries) -->
+    <dialog id="vidModal" class="w-[min(64rem,92vw)] overflow-visible rounded-2xl bg-transparent p-0 backdrop:bg-black/80" aria-label="Video player">
+      <div class="relative">
+        <button type="button" id="vidModalClose" class="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-amber-400 hover:text-emerald-950" aria-label="Close video">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <div class="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-2xl">
+          <iframe id="vidModalFrame" class="absolute inset-0 h-full w-full" title="ZOCF video" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p id="vidModalTitle" class="mt-3 text-center font-semibold text-white"></p>
+      </div>
+    </dialog>
+
     <section id="about" class="bg-white py-20 sm:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 class="reveal text-3xl font-bold text-emerald-900 sm:text-4xl">Our Core Pillars</h2>
@@ -782,6 +854,57 @@
       // Highlight the tile matching the video loaded in the main player
       const current = (player.src.match(/embed\/([^?&]+)/) || [])[1];
       buttons.forEach((b) => { if (b.dataset.videoId === current) setActive(b); });
+    })();
+
+    // Home video strip: build thumbnails, fetch missing titles, arrows, and pop-up player
+    (function () {
+      const strip = document.getElementById('vidStrip');
+      if (!strip) return;
+      const modal = document.getElementById('vidModal');
+      const frame = document.getElementById('vidModalFrame');
+      const mTitle = document.getElementById('vidModalTitle');
+      const esc = (t) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+      const playIcon = '<svg class="ml-0.5 h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 001.5.86l11-6.86a1 1 0 000-1.72l-11-6.86A1 1 0 008 5.14z"/></svg>';
+
+      strip.querySelectorAll('.home-vid').forEach((btn) => {
+        const id = (btn.dataset.videoId || '').trim();
+        if (!id) { btn.closest('li').remove(); return; }
+        let title = (btn.dataset.title || '').trim() || 'ZOCF News Group video';
+        btn.innerHTML =
+          '<span class="relative block aspect-video w-full overflow-hidden rounded-xl bg-emerald-900 shadow-lg ring-1 ring-white/10 transition group-hover:ring-4 group-hover:ring-amber-400">' +
+            '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(id) + '/hqdefault.jpg" alt="" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />' +
+            '<span class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0"></span>' +
+            '<span class="absolute inset-0 flex items-center justify-center">' +
+              '<span class="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white shadow-xl transition group-hover:scale-110">' + playIcon + '</span>' +
+            '</span>' +
+          '</span>' +
+          '<span class="vid-title mt-3 block text-sm font-semibold leading-snug text-white line-clamp-2 group-hover:text-amber-300">' + esc(title) + '</span>';
+        btn.setAttribute('aria-label', 'Play video: ' + title);
+        if (!(btn.dataset.title || '').trim()) {
+          fetch('https://www.youtube.com/oembed?format=json&url=' + encodeURIComponent('https://www.youtube.com/watch?v=' + id))
+            .then((r) => (r.ok ? r.json() : Promise.reject()))
+            .then((d) => { if (d && d.title) { title = d.title; btn.querySelector('.vid-title').textContent = title; btn.setAttribute('aria-label', 'Play video: ' + title); } })
+            .catch(() => {});
+        }
+        btn.addEventListener('click', () => {
+          frame.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?rel=0&autoplay=1';
+          frame.title = title;
+          mTitle.textContent = title;
+          if (typeof modal.showModal === 'function') modal.showModal();
+          else window.open('https://youtu.be/' + id, '_blank', 'noopener');
+        });
+      });
+
+      // Close: button, Esc, or click on the dark backdrop. Clearing src stops playback.
+      const close = () => { if (modal.open) modal.close(); };
+      document.getElementById('vidModalClose').addEventListener('click', close);
+      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+      modal.addEventListener('close', () => { frame.src = ''; });
+
+      // Arrow buttons scroll by roughly one screen of cards
+      const step = () => Math.max(260, strip.clientWidth * 0.8);
+      document.getElementById('vidPrev').addEventListener('click', () => strip.scrollBy({ left: -step(), behavior: 'smooth' }));
+      document.getElementById('vidNext').addEventListener('click', () => strip.scrollBy({ left: step(), behavior: 'smooth' }));
     })();
 
     // Keep copyright year current
