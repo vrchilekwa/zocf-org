@@ -553,25 +553,56 @@
     </section>
 
     <!-- =====================================================================
-         CONTACT & MEMBERSHIP FORM
+         CONTACT & MEMBERSHIP — fees, payment details and benefits come from the old zocf.org
+         "Become A Member" page. Update them here if they change.
          ===================================================================== -->
     <section id="join" class="relative overflow-hidden bg-emerald-950 py-20 sm:py-28">
       <div class="pattern-chitenge absolute inset-0" aria-hidden="true"></div>
       <div class="absolute -right-24 top-10 h-80 w-80 rounded-full bg-amber-400/20 blur-3xl" aria-hidden="true"></div>
 
-      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div class="relative mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+
+        <!-- LEFT: message, benefits, fees, how to pay -->
         <div class="reveal text-white">
           <p class="text-sm font-semibold uppercase tracking-widest text-amber-300">Membership</p>
           <h2 class="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">You don’t have to do life abroad alone.</h2>
-          <p class="mt-6 text-lg leading-relaxed text-emerald-50/90">Sign up and we’ll send you the prayer call link, upcoming events and a personal welcome from someone in your region.</p>
-          <ul class="mt-8 space-y-4">
-            <li class="flex items-center gap-3"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-amber-400 text-emerald-950"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Free to join — always</li>
-            <li class="flex items-center gap-3"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-amber-400 text-emerald-950"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Weekly prayer call access</li>
-            <li class="flex items-center gap-3"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-amber-400 text-emerald-950"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>Connect with Zambians near you</li>
+          <p class="mt-6 text-lg leading-relaxed text-emerald-50/90">Become an official member by completing the form and paying the annual membership fee. We’ll send you the prayer call link, upcoming events and a personal welcome from someone in your region.</p>
+
+          <h3 class="mt-10 text-sm font-semibold uppercase tracking-widest text-amber-300">Member benefits</h3>
+          <ul class="mt-4 space-y-3">
+            <li class="flex items-start gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-amber-400 text-emerald-950"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="pt-0.5">Weekly prayer call access and connection with Zambians near you</span></li>
+            <li class="flex items-start gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-amber-400 text-emerald-950"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="pt-0.5">Regular newsletter updates on ZOCF-sponsored and supported activities — and a say in how they develop</span></li>
+            <li class="flex items-start gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-amber-400 text-emerald-950"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="pt-0.5">Help organise, plan and take ownership of ZOCF conferences, seminars and symposia</span></li>
+            <li class="flex items-start gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-amber-400 text-emerald-950"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span class="pt-0.5">Qualify for a leadership role at any level within ZOCF</span></li>
           </ul>
+
+          <!-- Membership fees -->
+          <h3 class="mt-10 text-sm font-semibold uppercase tracking-widest text-amber-300">Annual membership fee</h3>
+          <div class="mt-4 grid grid-cols-3 gap-3">
+            <div class="rounded-2xl bg-white/10 p-4 text-center ring-1 ring-white/10"><p class="text-2xl font-extrabold text-amber-300">£18</p><p class="mt-1 text-xs text-emerald-50/80">Student<br />(full-time)</p></div>
+            <div class="rounded-2xl bg-white/10 p-4 text-center ring-2 ring-amber-400"><p class="text-2xl font-extrabold text-amber-300">£45</p><p class="mt-1 text-xs text-emerald-50/80">Individual</p></div>
+            <div class="rounded-2xl bg-white/10 p-4 text-center ring-1 ring-white/10"><p class="text-2xl font-extrabold text-amber-300">£90</p><p class="mt-1 text-xs text-emerald-50/80">Couple</p></div>
+          </div>
+          <p class="mt-3 text-sm text-emerald-50/80">Per year. Paying monthly is also available.</p>
+
+          <!-- How to pay -->
+          <h3 class="mt-10 text-sm font-semibold uppercase tracking-widest text-amber-300">How to pay</h3>
+          <div class="mt-4 space-y-3 text-sm text-emerald-50/90">
+            <div class="flex flex-col gap-3 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 sm:flex-row sm:items-center sm:justify-between">
+              <p><strong class="text-white">Online</strong> by card or PayPal (one-off or monthly)</p>
+              <a href="https://www.paypal.com/donate/?business=UDC5VL3UH3YHL&amp;no_recurring=0&amp;item_name=ZOCF+Membership+Fee&amp;item_number=Zofc-membership&amp;currency_code=GBP" target="_blank" rel="noopener" class="inline-flex shrink-0 items-center justify-center rounded-full bg-amber-400 px-5 py-2 font-bold text-emerald-950 transition hover:bg-amber-300">Pay Membership Fee</a>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+              <p><strong class="text-white">Bank transfer or standing order</strong> — use your name as the reference</p>
+              <p class="mt-2">Barclays Bank, Coventry Branch · <strong class="text-white">ZOCF UK</strong></p>
+              <p class="mt-1 flex flex-wrap gap-x-4 gap-y-1 font-mono tracking-wider"><span class="whitespace-nowrap">Account <strong class="text-white">20800104</strong></span><span class="whitespace-nowrap">Sort code <strong class="text-white">20-23-60</strong></span></p>
+            </div>
+            <p class="px-1">You can also pay through your <strong class="text-white">regional leader</strong> or <strong class="text-white">by cheque</strong> payable to ZOCF UK.</p>
+          </div>
         </div>
 
-        <div class="reveal reveal-delay-1">
+        <!-- RIGHT: registration form card -->
+        <div class="reveal reveal-delay-1 lg:sticky lg:top-28">
           <div class="rounded-3xl bg-white p-8 shadow-2xl sm:p-10">
             <h3 class="text-2xl font-bold text-gray-900 sm:text-3xl">Become Part of the Family</h3>
             <p class="mt-2 text-gray-600">It takes less than a minute.</p>
@@ -581,27 +612,45 @@
                  This page has no server, so set the form's "action" to a form service, e.g.:
                    • Formspree:     action="https://formspree.io/f/YOUR_FORM_ID"  method="POST"
                    • Netlify Forms: add  data-netlify="true"  name="zocf-membership"
-                   • Google Forms / your own backend endpoint
-                 While action="#" is left in place, the small script at the bottom shows a
-                 thank-you message without sending data anywhere.
+                 While action="#" is left in place, the script at the bottom shows a thank-you
+                 message without sending data anywhere.
                  ============================================================ -->
             <form id="joinForm" action="#" method="POST" class="mt-8 space-y-5" novalidate>
               <div>
                 <label for="name" class="mb-1.5 block text-sm font-semibold text-gray-800">Full name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required placeholder="e.g. Chanda Mwila"
-                       class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100" />
+                <input id="name" name="name" type="text" autocomplete="name" required placeholder="e.g. Chanda Mwila" class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100" />
               </div>
               <div>
                 <label for="email" class="mb-1.5 block text-sm font-semibold text-gray-800">Email address</label>
-                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"
-                       class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100" />
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100" />
+              </div>
+              <div>
+                <label for="phone" class="mb-1.5 block text-sm font-semibold text-gray-800">Phone number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="e.g. 07700 900123" class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100" />
               </div>
               <div>
                 <label for="location" class="mb-1.5 block text-sm font-semibold text-gray-800">Where are you based?</label>
-                <input id="location" name="location" type="text" autocomplete="address-level2" required placeholder="City, Country"
-                       class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100" />
+                <select id="location" name="region" required class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100">
+                  <option value="" disabled selected>Choose your nearest chapter</option>
+                    <option>London</option>
+                    <option>Manchester</option>
+                    <option>Midlands</option>
+                    <option>Leeds</option>
+                    <option>Ireland</option>
+                    <option>Scotland</option>
+                    <option>Wales</option>
+                    <option>Other / not sure</option>
+                </select>
               </div>
-              <p id="formError" class="hidden text-sm font-medium text-red-600" role="alert">Please fill in all three fields with a valid email.</p>
+              <div>
+                <label for="membership" class="mb-1.5 block text-sm font-semibold text-gray-800">Membership type</label>
+                <select id="membership" name="membership" class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-emerald-600 focus:bg-white focus:ring-4 focus:ring-emerald-100">
+                  <option>Individual — £45 / year</option>
+                  <option>Student (full-time) — £18 / year</option>
+                  <option>Couple — £90 / year</option>
+                </select>
+              </div>
+              <p id="formError" class="hidden text-sm font-medium text-red-600" role="alert">Please fill in all fields with a valid email.</p>
               <button type="submit" class="w-full rounded-full bg-amber-400 px-6 py-4 text-base font-bold text-gray-900 shadow-lg shadow-amber-500/30 transition hover:-translate-y-0.5 hover:bg-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-200">
                 Join the Fellowship
               </button>
@@ -614,7 +663,13 @@
                 <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
               </div>
               <h4 class="mt-5 text-2xl font-bold text-gray-900">Welcome home!</h4>
-              <p class="mt-2 text-gray-600">Thank you for joining. Look out for an email from us soon.</p>
+              <p class="mt-2 text-gray-600">Thank you for joining. Remember to pay your membership fee — the options are listed alongside.</p>
+            </div>
+
+            <!-- Donate + contact (from the old site) -->
+            <div class="mt-8 space-y-2 border-t border-gray-100 pt-6 text-center text-sm text-gray-600">
+              <p>Not ready to join but would like to give? <a href="https://www.paypal.com/donate/?business=UDC5VL3UH3YHL&amp;no_recurring=0&amp;item_name=Zambia+Overseas+Christian+Fellowship&amp;currency_code=GBP" target="_blank" rel="noopener" class="font-semibold text-emerald-700 underline-offset-4 hover:underline">Donate</a></p>
+              <p>Questions? <a href="mailto:contact@zocf.org" class="font-semibold text-emerald-700 underline-offset-4 hover:underline">contact@zocf.org</a></p>
             </div>
           </div>
         </div>
