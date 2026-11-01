@@ -1,0 +1,57 @@
+[
+  {
+    "id": "mwila-textiles",
+    "name": "Mwila Textiles",
+    "location": "Manchester, United Kingdom",
+    "memberSince": "2024-03-01",
+    "bio": "A family business bringing bright wax prints and children's fabrics from Lusaka markets to the North West of England.",
+    "specialities": ["Wax prints", "Children's fabrics", "Strip cloth prints"],
+    "deliveryInfo": "Dispatches within 2 working days from Manchester. UK delivery 2–4 working days.",
+    "accent": "#1d4e9e",
+    "demoSales": { "ordersThisMonth": 14, "unitsSold": 23, "revenue": 412.5, "topProductId": "blue-yellow-african-wax-print" }
+  },
+  {
+    "id": "chandas-chitenge-house",
+    "name": "Chanda's Chitenge House",
+    "location": "London, United Kingdom",
+    "memberSince": "2023-10-24",
+    "bio": "Specialists in traditional Zambian chitenge and heritage colourways, sourced from producers in Lusaka and Kitwe.",
+    "specialities": ["Traditional chitenge", "Heritage collections", "Floral prints"],
+    "deliveryInfo": "Dispatches within 1–3 working days from London. Collection available at ZOCF London events.",
+    "accent": "#c8102e",
+    "demoSales": { "ordersThisMonth": 21, "unitsSold": 34, "revenue": 786.0, "topProductId": "traditional-zambian-heritage-print" }
+  },
+  {
+    "id": "lusaka-looms-diaspora",
+    "name": "Lusaka Looms Diaspora",
+    "location": "Birmingham, United Kingdom",
+    "memberSince": "2024-06-15",
+    "bio": "Bold geometric chitenge and earthy prints, with a focus on supporting small-scale textile traders.",
+    "specialities": ["Geometric prints", "Earth tones", "River-inspired designs"],
+    "deliveryInfo": "Dispatches within 3 working days from Birmingham. UK delivery 2–5 working days.",
+    "accent": "#161616",
+    "demoSales": { "ordersThisMonth": 9, "unitsSold": 15, "revenue": 241.5, "topProductId": "red-black-geometric-chitenge" }
+  },
+  {
+    "id": "bana-bemba-prints",
+    "name": "Bana Bemba Prints",
+    "location": "Leeds, United Kingdom",
+    "memberSince": "2025-01-10",
+    "bio": "Celebration and wedding fabrics, including matching sets for families and kitchen-party groups.",
+    "specialities": ["Wedding fabrics", "Matching family sets", "Independence colours"],
+    "deliveryInfo": "Dispatches within 2 working days from Leeds. Bulk orders for events by arrangement.",
+    "accent": "#f2b01e",
+    "demoSales": { "ordersThisMonth": 17, "unitsSold": 41, "revenue": 898.5, "topProductId": "golden-union-wedding-chitenge" }
+  },
+  {
+    "id": "copperbelt-fabric-co",
+    "name": "Copperbelt Fabric Co.",
+    "location": "Dublin, Ireland",
+    "memberSince": "2024-09-05",
+    "bio": "Contemporary African prints and designer pieces inspired by the Copperbelt, shipped across Ireland and the UK.",
+    "specialities": ["Contemporary prints", "Designer fabrics", "Copper tones"],
+    "deliveryInfo": "Dispatches within 3 working days from Dublin. Ireland 2–3 working days, UK 3–6 working days.",
+    "accent": "#b8652a",
+    "demoSales": { "ordersThisMonth": 11, "unitsSold": 18, "revenue": 433.0, "topProductId": "cowrie-shell-designer-print" }
+  }
+]

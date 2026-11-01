@@ -1,0 +1,727 @@
+[
+  {
+    "id": "traditional-zambian-heritage-print",
+    "name": "Traditional Zambian Heritage Print",
+    "description": "Radiating sun medallions in red and gold on a deep black ground, finished with a diamond border. A classic heritage chitenge for ceremonies, church and family celebrations.",
+    "category": "traditional",
+    "price": 24,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "red",
+      "black",
+      "gold"
+    ],
+    "patterns": [
+      "heritage",
+      "sun",
+      "circles"
+    ],
+    "images": [
+      "images/products/traditional-zambian-heritage-print-1.svg",
+      "images/products/traditional-zambian-heritage-print-2.svg",
+      "images/products/traditional-zambian-heritage-print-3.svg"
+    ],
+    "sellerId": "chandas-chitenge-house",
+    "sellerName": "Chanda's Chitenge House",
+    "stockQuantity": 12,
+    "availability": "in-stock",
+    "featured": true,
+    "dateAdded": "2026-08-04",
+    "popularity": 96,
+    "isDemo": true
+  },
+  {
+    "id": "blue-yellow-african-wax-print",
+    "name": "Blue and Yellow African Wax Print",
+    "description": "Bright yellow concentric circles on a royal blue ground. A cheerful, crisp wax print that works for wrappers, dresses and shirts.",
+    "category": "modern",
+    "price": 18.5,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "blue",
+      "yellow",
+      "white"
+    ],
+    "patterns": [
+      "circles",
+      "wax print"
+    ],
+    "images": [
+      "images/products/blue-yellow-african-wax-print-1.svg",
+      "images/products/blue-yellow-african-wax-print-2.svg",
+      "images/products/blue-yellow-african-wax-print-3.svg"
+    ],
+    "sellerId": "mwila-textiles",
+    "sellerName": "Mwila Textiles",
+    "stockQuantity": 20,
+    "availability": "in-stock",
+    "featured": true,
+    "dateAdded": "2026-08-12",
+    "popularity": 91,
+    "isDemo": true
+  },
+  {
+    "id": "red-black-geometric-chitenge",
+    "name": "Red and Black Geometric Chitenge",
+    "description": "Nested red and cream diamonds on black, with a sharp zigzag border. Strong, graphic and easy to style.",
+    "category": "geometric",
+    "price": 16,
+    "currency": "GBP",
+    "fabricLength": "2 yards",
+    "dimensions": {
+      "lengthCm": 183,
+      "widthCm": 114
+    },
+    "composition": "100% cotton",
+    "colours": [
+      "red",
+      "black",
+      "cream"
+    ],
+    "patterns": [
+      "geometric",
+      "diamond"
+    ],
+    "images": [
+      "images/products/red-black-geometric-chitenge-1.svg",
+      "images/products/red-black-geometric-chitenge-2.svg",
+      "images/products/red-black-geometric-chitenge-3.svg"
+    ],
+    "sellerId": "lusaka-looms-diaspora",
+    "sellerName": "Lusaka Looms Diaspora",
+    "stockQuantity": 8,
+    "availability": "in-stock",
+    "featured": true,
+    "dateAdded": "2026-08-20",
+    "popularity": 88,
+    "isDemo": true
+  },
+  {
+    "id": "floral-celebration-chitenge",
+    "name": "Floral Celebration Chitenge",
+    "description": "Pink and red blooms scattered across an ivory ground with fresh green leaves. Made for kitchen parties, weddings and matching family outfits.",
+    "category": "wedding",
+    "price": 22,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "pink",
+      "red",
+      "white",
+      "green"
+    ],
+    "patterns": [
+      "floral"
+    ],
+    "images": [
+      "images/products/floral-celebration-chitenge-1.svg",
+      "images/products/floral-celebration-chitenge-2.svg",
+      "images/products/floral-celebration-chitenge-3.svg"
+    ],
+    "sellerId": "bana-bemba-prints",
+    "sellerName": "Bana Bemba Prints",
+    "stockQuantity": 6,
+    "availability": "in-stock",
+    "featured": true,
+    "dateAdded": "2026-09-02",
+    "popularity": 84,
+    "isDemo": true
+  },
+  {
+    "id": "contemporary-african-print",
+    "name": "Contemporary African Print",
+    "description": "Organic orange and cream shapes with flowing lines on a teal ground. A modern take on African print for fashion-forward tailoring.",
+    "category": "modern",
+    "price": 19,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "teal",
+      "orange",
+      "cream"
+    ],
+    "patterns": [
+      "abstract",
+      "modern"
+    ],
+    "images": [
+      "images/products/contemporary-african-print-1.svg",
+      "images/products/contemporary-african-print-2.svg",
+      "images/products/contemporary-african-print-3.svg"
+    ],
+    "sellerId": "copperbelt-fabric-co",
+    "sellerName": "Copperbelt Fabric Co.",
+    "stockQuantity": 10,
+    "availability": "in-stock",
+    "featured": true,
+    "dateAdded": "2026-09-08",
+    "popularity": 79,
+    "isDemo": true
+  },
+  {
+    "id": "colourful-heritage-collection",
+    "name": "Colourful Heritage Collection",
+    "description": "A curated set of three coordinating heritage pieces in navy, orange, yellow and green. Ideal for a family or group outfit.",
+    "category": "premium",
+    "price": 45,
+    "currency": "GBP",
+    "fabricLength": "3 pieces × 2 yards",
+    "dimensions": {
+      "lengthCm": 183,
+      "widthCm": 114,
+      "note": "Each piece"
+    },
+    "composition": "Premium heavyweight cotton wax print",
+    "colours": [
+      "blue",
+      "orange",
+      "yellow",
+      "green",
+      "red"
+    ],
+    "patterns": [
+      "heritage",
+      "sun"
+    ],
+    "images": [
+      "images/products/colourful-heritage-collection-1.svg",
+      "images/products/colourful-heritage-collection-2.svg",
+      "images/products/colourful-heritage-collection-3.svg"
+    ],
+    "sellerId": "chandas-chitenge-house",
+    "sellerName": "Chanda's Chitenge House",
+    "stockQuantity": 3,
+    "availability": "low-stock",
+    "featured": true,
+    "dateAdded": "2026-09-15",
+    "popularity": 82,
+    "isDemo": true
+  },
+  {
+    "id": "copperbelt-copper-diamonds",
+    "name": "Copperbelt Copper Diamonds",
+    "description": "Copper, gold and earth-brown diamonds inspired by the mining towns of the Copperbelt, with a mud-cloth style border.",
+    "category": "geometric",
+    "price": 17,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton",
+    "colours": [
+      "orange",
+      "brown",
+      "gold"
+    ],
+    "patterns": [
+      "geometric",
+      "diamond"
+    ],
+    "images": [
+      "images/products/copperbelt-copper-diamonds-1.svg",
+      "images/products/copperbelt-copper-diamonds-2.svg",
+      "images/products/copperbelt-copper-diamonds-3.svg"
+    ],
+    "sellerId": "copperbelt-fabric-co",
+    "sellerName": "Copperbelt Fabric Co.",
+    "stockQuantity": 15,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-09-20",
+    "popularity": 70,
+    "isDemo": true
+  },
+  {
+    "id": "kafue-river-blues",
+    "name": "Kafue River Blues",
+    "description": "Sky-blue and white ripples on navy, inspired by the Kafue River. A calm, versatile everyday chitenge.",
+    "category": "traditional",
+    "price": 15,
+    "currency": "GBP",
+    "fabricLength": "2 yards",
+    "dimensions": {
+      "lengthCm": 183,
+      "widthCm": 114
+    },
+    "composition": "100% cotton",
+    "colours": [
+      "blue",
+      "white"
+    ],
+    "patterns": [
+      "waves",
+      "stripes"
+    ],
+    "images": [
+      "images/products/kafue-river-blues-1.svg",
+      "images/products/kafue-river-blues-2.svg",
+      "images/products/kafue-river-blues-3.svg"
+    ],
+    "sellerId": "lusaka-looms-diaspora",
+    "sellerName": "Lusaka Looms Diaspora",
+    "stockQuantity": 0,
+    "availability": "out-of-stock",
+    "featured": false,
+    "dateAdded": "2026-08-08",
+    "popularity": 74,
+    "isDemo": true
+  },
+  {
+    "id": "mosi-oa-tunya-mist-print",
+    "name": "Mosi-oa-Tunya Mist Print",
+    "description": "Rolling white waves and gold accents on deep teal, evoking the spray of Mosi-oa-Tunya (Victoria Falls). A soft sateen finish with a subtle sheen.",
+    "category": "premium",
+    "price": 38,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "Premium cotton sateen",
+    "colours": [
+      "teal",
+      "white",
+      "gold"
+    ],
+    "patterns": [
+      "waves",
+      "abstract"
+    ],
+    "images": [
+      "images/products/mosi-oa-tunya-mist-print-1.svg",
+      "images/products/mosi-oa-tunya-mist-print-2.svg",
+      "images/products/mosi-oa-tunya-mist-print-3.svg"
+    ],
+    "sellerId": "mwila-textiles",
+    "sellerName": "Mwila Textiles",
+    "stockQuantity": 4,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-02",
+    "popularity": 77,
+    "isDemo": true
+  },
+  {
+    "id": "golden-union-wedding-chitenge",
+    "name": "Golden Union Wedding Chitenge",
+    "description": "Interlocking gold and green rings on ivory: a symbol of union for weddings, engagements and anniversaries.",
+    "category": "wedding",
+    "price": 29,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "gold",
+      "white",
+      "green"
+    ],
+    "patterns": [
+      "rings",
+      "circles"
+    ],
+    "images": [
+      "images/products/golden-union-wedding-chitenge-1.svg",
+      "images/products/golden-union-wedding-chitenge-2.svg",
+      "images/products/golden-union-wedding-chitenge-3.svg"
+    ],
+    "sellerId": "bana-bemba-prints",
+    "sellerName": "Bana Bemba Prints",
+    "stockQuantity": 10,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-05",
+    "popularity": 86,
+    "isDemo": true
+  },
+  {
+    "id": "little-stars-childrens-print",
+    "name": "Little Stars Children’s Print",
+    "description": "Yellow stars and pink dots on sky blue. A soft, playful print sized for children’s dresses and shirts.",
+    "category": "children",
+    "price": 12,
+    "currency": "GBP",
+    "fabricLength": "2 yards",
+    "dimensions": {
+      "lengthCm": 183,
+      "widthCm": 114
+    },
+    "composition": "100% soft cotton",
+    "colours": [
+      "blue",
+      "yellow",
+      "pink"
+    ],
+    "patterns": [
+      "stars",
+      "dots"
+    ],
+    "images": [
+      "images/products/little-stars-childrens-print-1.svg",
+      "images/products/little-stars-childrens-print-2.svg",
+      "images/products/little-stars-childrens-print-3.svg"
+    ],
+    "sellerId": "mwila-textiles",
+    "sellerName": "Mwila Textiles",
+    "stockQuantity": 25,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-09-28",
+    "popularity": 68,
+    "isDemo": true
+  },
+  {
+    "id": "playful-dots-childrens-fabric",
+    "name": "Playful Dots Children’s Fabric",
+    "description": "Bouncy orange and yellow dots on bright green. Easy to sew and great for school events and birthdays.",
+    "category": "children",
+    "price": 11.5,
+    "currency": "GBP",
+    "fabricLength": "2 yards",
+    "dimensions": {
+      "lengthCm": 183,
+      "widthCm": 114
+    },
+    "composition": "100% soft cotton",
+    "colours": [
+      "green",
+      "orange",
+      "yellow"
+    ],
+    "patterns": [
+      "dots"
+    ],
+    "images": [
+      "images/products/playful-dots-childrens-fabric-1.svg",
+      "images/products/playful-dots-childrens-fabric-2.svg",
+      "images/products/playful-dots-childrens-fabric-3.svg"
+    ],
+    "sellerId": "copperbelt-fabric-co",
+    "sellerName": "Copperbelt Fabric Co.",
+    "stockQuantity": 18,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-12",
+    "popularity": 61,
+    "isDemo": true
+  },
+  {
+    "id": "hibiscus-bloom-floral",
+    "name": "Hibiscus Bloom Floral",
+    "description": "Bold red hibiscus flowers with yellow centres on a rich emerald ground, finished with a leaf border.",
+    "category": "floral",
+    "price": 17.5,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "red",
+      "green",
+      "pink",
+      "yellow"
+    ],
+    "patterns": [
+      "floral"
+    ],
+    "images": [
+      "images/products/hibiscus-bloom-floral-1.svg",
+      "images/products/hibiscus-bloom-floral-2.svg",
+      "images/products/hibiscus-bloom-floral-3.svg"
+    ],
+    "sellerId": "chandas-chitenge-house",
+    "sellerName": "Chanda's Chitenge House",
+    "stockQuantity": 9,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-15",
+    "popularity": 73,
+    "isDemo": true
+  },
+  {
+    "id": "jacaranda-lilac-floral",
+    "name": "Jacaranda Lilac Floral",
+    "description": "Purple and lilac blossoms on a cream ground, inspired by Lusaka’s jacaranda season.",
+    "category": "floral",
+    "price": 18,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "purple",
+      "cream",
+      "green"
+    ],
+    "patterns": [
+      "floral"
+    ],
+    "images": [
+      "images/products/jacaranda-lilac-floral-1.svg",
+      "images/products/jacaranda-lilac-floral-2.svg",
+      "images/products/jacaranda-lilac-floral-3.svg"
+    ],
+    "sellerId": "bana-bemba-prints",
+    "sellerName": "Bana Bemba Prints",
+    "stockQuantity": 2,
+    "availability": "low-stock",
+    "featured": false,
+    "dateAdded": "2026-10-20",
+    "popularity": 80,
+    "isDemo": true
+  },
+  {
+    "id": "earth-tones-mudcloth-print",
+    "name": "Earth Tones Mud-Cloth Inspired Print",
+    "description": "Hand-drawn style dashes, crosses and zigzags in cream on deep earth brown, inspired by West African mud-cloth traditions.",
+    "category": "other",
+    "price": 20,
+    "currency": "GBP",
+    "fabricLength": "3 yards",
+    "dimensions": {
+      "lengthCm": 274,
+      "widthCm": 114
+    },
+    "composition": "100% cotton",
+    "colours": [
+      "brown",
+      "cream",
+      "black"
+    ],
+    "patterns": [
+      "mud cloth",
+      "abstract",
+      "stripes"
+    ],
+    "images": [
+      "images/products/earth-tones-mudcloth-print-1.svg",
+      "images/products/earth-tones-mudcloth-print-2.svg",
+      "images/products/earth-tones-mudcloth-print-3.svg"
+    ],
+    "sellerId": "lusaka-looms-diaspora",
+    "sellerName": "Lusaka Looms Diaspora",
+    "stockQuantity": 7,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-18",
+    "popularity": 58,
+    "isDemo": true
+  },
+  {
+    "id": "woven-check-strip-cloth-print",
+    "name": "Woven Check Strip-Cloth Print",
+    "description": "Blocks of yellow, green and red stripes, printed to echo hand-woven strip cloth from across the continent.",
+    "category": "other",
+    "price": 21,
+    "currency": "GBP",
+    "fabricLength": "3 yards",
+    "dimensions": {
+      "lengthCm": 274,
+      "widthCm": 114
+    },
+    "composition": "100% cotton",
+    "colours": [
+      "yellow",
+      "green",
+      "red",
+      "black"
+    ],
+    "patterns": [
+      "checks",
+      "stripes",
+      "geometric"
+    ],
+    "images": [
+      "images/products/woven-check-strip-cloth-print-1.svg",
+      "images/products/woven-check-strip-cloth-print-2.svg",
+      "images/products/woven-check-strip-cloth-print-3.svg"
+    ],
+    "sellerId": "mwila-textiles",
+    "sellerName": "Mwila Textiles",
+    "stockQuantity": 5,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-22",
+    "popularity": 64,
+    "isDemo": true
+  },
+  {
+    "id": "zambezi-leaves-print",
+    "name": "Zambezi Leaves Print",
+    "description": "Fresh green and gold leaves on emerald, inspired by the banks of the Zambezi. A relaxed print for summer outfits.",
+    "category": "modern",
+    "price": 16.5,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "green",
+      "gold"
+    ],
+    "patterns": [
+      "leaves",
+      "nature"
+    ],
+    "images": [
+      "images/products/zambezi-leaves-print-1.svg",
+      "images/products/zambezi-leaves-print-2.svg",
+      "images/products/zambezi-leaves-print-3.svg"
+    ],
+    "sellerId": "chandas-chitenge-house",
+    "sellerName": "Chanda's Chitenge House",
+    "stockQuantity": 14,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-25",
+    "popularity": 71,
+    "isDemo": true
+  },
+  {
+    "id": "independence-colours-chitenge",
+    "name": "Independence Colours Chitenge",
+    "description": "Zigzag bands in the colours of the Zambian flag (green, red, black and orange), with a sun-medallion border. Made for Independence Day on 24 October.",
+    "category": "traditional",
+    "price": 19.5,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "100% cotton wax print",
+    "colours": [
+      "green",
+      "red",
+      "black",
+      "orange"
+    ],
+    "patterns": [
+      "zigzag",
+      "geometric",
+      "heritage"
+    ],
+    "images": [
+      "images/products/independence-colours-chitenge-1.svg",
+      "images/products/independence-colours-chitenge-2.svg",
+      "images/products/independence-colours-chitenge-3.svg"
+    ],
+    "sellerId": "bana-bemba-prints",
+    "sellerName": "Bana Bemba Prints",
+    "stockQuantity": 30,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-24",
+    "popularity": 93,
+    "isDemo": true
+  },
+  {
+    "id": "cowrie-shell-designer-print",
+    "name": "Cowrie Shell Designer Print",
+    "description": "Ivory cowrie shells and gold accents on deep navy. A limited designer run on heavier cloth.",
+    "category": "premium",
+    "price": 42,
+    "currency": "GBP",
+    "fabricLength": "6 yards",
+    "dimensions": {
+      "lengthCm": 548,
+      "widthCm": 114
+    },
+    "composition": "Premium heavyweight cotton",
+    "colours": [
+      "blue",
+      "white",
+      "gold"
+    ],
+    "patterns": [
+      "shells",
+      "cowrie"
+    ],
+    "images": [
+      "images/products/cowrie-shell-designer-print-1.svg",
+      "images/products/cowrie-shell-designer-print-2.svg",
+      "images/products/cowrie-shell-designer-print-3.svg"
+    ],
+    "sellerId": "copperbelt-fabric-co",
+    "sellerName": "Copperbelt Fabric Co.",
+    "stockQuantity": 3,
+    "availability": "low-stock",
+    "featured": false,
+    "dateAdded": "2026-10-28",
+    "popularity": 76,
+    "isDemo": true
+  },
+  {
+    "id": "luangwa-zigzag-chitenge",
+    "name": "Luangwa Zigzag Chitenge",
+    "description": "Bold yellow and white zigzags on black, inspired by the winding Luangwa River.",
+    "category": "geometric",
+    "price": 15.5,
+    "currency": "GBP",
+    "fabricLength": "2 yards",
+    "dimensions": {
+      "lengthCm": 183,
+      "widthCm": 114
+    },
+    "composition": "100% cotton",
+    "colours": [
+      "black",
+      "yellow",
+      "white"
+    ],
+    "patterns": [
+      "zigzag",
+      "geometric"
+    ],
+    "images": [
+      "images/products/luangwa-zigzag-chitenge-1.svg",
+      "images/products/luangwa-zigzag-chitenge-2.svg",
+      "images/products/luangwa-zigzag-chitenge-3.svg"
+    ],
+    "sellerId": "lusaka-looms-diaspora",
+    "sellerName": "Lusaka Looms Diaspora",
+    "stockQuantity": 11,
+    "availability": "in-stock",
+    "featured": false,
+    "dateAdded": "2026-10-30",
+    "popularity": 66,
+    "isDemo": true
+  }
+]

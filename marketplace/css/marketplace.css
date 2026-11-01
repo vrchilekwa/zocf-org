@@ -1,0 +1,107 @@
+/* ZOCF Chitenge Marketplace – styles that Tailwind utilities don't cover.
+   Colours follow the main ZOCF site: emerald greens, amber accents, Inter type. */
+
+:root {
+  --mp-cream: #fbf7ef;
+  --mp-emerald: #065f46;
+  --mp-amber: #fbbf24;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Keep in-page jumps clear of the sticky header */
+[id] { scroll-margin-top: 8rem; }
+
+/* Never allow sideways scrolling on small screens */
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+
+/* Same chitenge diamond texture used on the main site's dark sections */
+.pattern-chitenge {
+  background-image:
+    linear-gradient(45deg, rgba(251,191,36,.07) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(251,191,36,.07) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(251,191,36,.07) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(251,191,36,.07) 75%);
+  background-size: 36px 36px;
+  background-position: 0 0, 0 18px, 18px -18px, -18px 0;
+}
+
+/* Chitenge border band: a strip of printed pattern used under headings and in the footer */
+.mp-band {
+  background-image: url('../images/products/independence-colours-chitenge-1.svg');
+  background-size: 64px 64px;
+  background-repeat: repeat;
+}
+
+/* Navigation */
+.mp-navlink {
+  border-bottom: 2px solid transparent;
+  padding-bottom: .25rem;
+  transition: color .15s, border-color .15s;
+}
+.mp-navlink:hover { color: #065f46; border-color: #6ee7b7; }
+.mp-navlink[aria-current="page"] { color: #065f46; border-color: #047857; }
+.mp-mobilelink { display: block; border-radius: .5rem; padding: .625rem .75rem; }
+.mp-mobilelink:hover, .mp-mobilelink[aria-current="page"] { background: #ecfdf5; color: #065f46; }
+
+/* Hero */
+.mp-hero {
+  background-color: #022c22;
+  background-image: url('../images/hero-fabrics.svg');
+  background-size: cover;
+  background-position: 70% center;
+}
+.mp-hero-overlay {
+  background: linear-gradient(90deg, rgba(2,44,34,.97) 0%, rgba(2,44,34,.88) 42%, rgba(2,44,34,.25) 75%, rgba(2,44,34,0) 100%);
+}
+@media (max-width: 1023px) {
+  .mp-hero-overlay { background: linear-gradient(180deg, rgba(2,44,34,.80) 0%, rgba(2,44,34,.92) 100%); }
+}
+
+/* AI panel glow */
+.mp-ai-glow {
+  position: absolute; inset: -40% -10% auto auto; width: 60%; height: 140%;
+  background: radial-gradient(closest-side, rgba(251,191,36,.30), transparent 70%);
+  pointer-events: none;
+}
+
+/* Loading skeletons and spinner */
+.mp-skeleton {
+  background: linear-gradient(90deg, #eee7da 0%, #f8f3ea 50%, #eee7da 100%);
+  background-size: 200% 100%;
+  animation: mp-shimmer 1.3s ease-in-out infinite;
+}
+@keyframes mp-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.mp-spinner {
+  width: 1.75rem; height: 1.75rem; border-radius: 9999px;
+  border: 3px solid #d1fae5; border-top-color: #065f46;
+  animation: mp-spin .8s linear infinite;
+}
+@keyframes mp-spin { to { transform: rotate(360deg); } }
+
+/* Toasts */
+.mp-toast { animation: mp-toast-in .2s ease-out; transition: opacity .2s; }
+@keyframes mp-toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* Number inputs: hide spinners for cleaner quantity controls */
+.mp-qty::-webkit-outer-spin-button, .mp-qty::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.mp-qty { -moz-appearance: textfield; appearance: textfield; }
+
+/* Inspiration masonry */
+.mp-masonry { column-gap: 1.25rem; columns: 1; }
+@media (min-width: 560px) { .mp-masonry { columns: 2; } }
+@media (min-width: 1024px) { .mp-masonry { columns: 3; } }
+@media (min-width: 1280px) { .mp-masonry { columns: 4; } }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+dialog[open] { animation: mp-toast-in .2s ease-out; }

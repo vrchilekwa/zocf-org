@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOCF Chitenge Marketplace | Zambia Overseas Christian Fellowship</title>
+  <meta name="description" content="ZOCF Chitenge Marketplace: celebrating Zambian culture through fashion, textiles and enterprise. Discover chitenge fabrics from community sellers across the diaspora (demonstration)." />
+  <meta name="theme-color" content="#065f46" />
+  <meta property="og:title" content="ZOCF Chitenge Marketplace" />
+  <meta property="og:description" content="Celebrating Zambian Culture Through Fashion, Textiles and Enterprise." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="../images/zocf-logo.png" />
+
+  <!-- Same font and Tailwind setup as the main ZOCF site (index.html in the repository root) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } },
+    };
+  </script>
+  <link rel="stylesheet" href="css/marketplace.css" />
+  <script type="module" src="js/app.js"></script>
+</head>
+
+<body class="bg-[#fbf7ef] font-sans text-gray-800 antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-md focus:bg-amber-400 focus:px-4 focus:py-2 focus:font-semibold focus:text-gray-900">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="sticky top-0 z-50 border-b border-gray-100 bg-white/95 shadow-sm backdrop-blur-md">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8" aria-label="Marketplace navigation">
+      <div class="flex min-w-0 items-center gap-3">
+        <a href="../" class="flex shrink-0 items-center" aria-label="ZOCF main website home">
+          <img src="../images/zocf-logo.png" alt="ZOCF" class="h-10 w-auto sm:h-12" width="120" height="62" />
+        </a>
+        <a href="#/" class="min-w-0 border-l border-gray-200 pl-3 leading-tight">
+          <span class="block truncate text-sm font-extrabold text-emerald-900 sm:text-base">Chitenge Marketplace</span>
+          <span class="hidden text-xs font-medium text-amber-700 sm:block">Fashion · Textiles · Enterprise</span>
+        </a>
+      </div>
+
+      <ul class="hidden items-center gap-6 text-[15px] font-medium text-gray-700 lg:flex">
+        <li><a href="#/" data-route="home" class="mp-navlink">Marketplace</a></li>
+        <li><a href="#/catalogue" data-route="catalogue product" class="mp-navlink">Catalogue</a></li>
+        <li><a href="#/inspiration" data-route="inspiration" class="mp-navlink">Inspiration</a></li>
+        <li><a href="#/discover" data-route="discover" class="mp-navlink">AI Discovery</a></li>
+        <li><a href="#/sellers" data-route="sellers seller-register seller-profile dashboard" class="mp-navlink">Sell with us</a></li>
+      </ul>
+
+      <div class="flex shrink-0 items-center gap-2">
+        <a href="../" class="hidden rounded-lg px-3 py-2 text-sm font-semibold text-gray-600 hover:bg-emerald-50 hover:text-emerald-800 xl:inline-block">← ZOCF home</a>
+        <a href="#/basket" data-route="basket checkout" class="relative inline-flex h-11 items-center gap-2 rounded-xl bg-emerald-800 px-3 text-sm font-semibold text-white shadow-md transition hover:bg-emerald-700 sm:px-4" aria-label="Basket, 0 items" id="basketLink">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.4 10.2a2 2 0 0 1-2 1.8H8.4a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="hidden sm:inline">Basket</span>
+          <span id="basketCount" class="min-w-[1.5rem] rounded-full bg-amber-400 px-1.5 py-0.5 text-center text-xs font-extrabold text-emerald-950">0</span>
+        </a>
+        <button id="menuBtn" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-emerald-900 hover:bg-emerald-50 lg:hidden" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+          <svg id="menuIconOpen" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="menuIconClose" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="hidden border-t border-gray-100 bg-white lg:hidden">
+      <ul class="space-y-1 px-4 py-4 text-base font-medium text-gray-700">
+        <li><a href="#/" data-route="home" class="mp-mobilelink">Marketplace home</a></li>
+        <li><a href="#/catalogue" data-route="catalogue product" class="mp-mobilelink">Catalogue</a></li>
+        <li><a href="#/inspiration" data-route="inspiration" class="mp-mobilelink">Inspiration Gallery</a></li>
+        <li><a href="#/discover" data-route="discover" class="mp-mobilelink">AI Discovery (demo)</a></li>
+        <li><a href="#/sellers" data-route="sellers seller-register seller-profile dashboard" class="mp-mobilelink">Sell with us</a></li>
+        <li><a href="#/basket" data-route="basket checkout" class="mp-mobilelink">Basket</a></li>
+        <li class="border-t border-gray-100 pt-2"><a href="../" class="mp-mobilelink">← Back to the ZOCF website</a></li>
+      </ul>
+    </div>
+
+    <!-- Persistent demonstration notice -->
+    <div class="mp-band-strip border-t border-amber-200 bg-amber-50 px-4 py-1.5 text-center text-xs font-medium text-amber-900 sm:text-sm">
+      <strong>Demonstration marketplace:</strong> listings, sellers and prices are illustrative. Nothing can be bought and no payments are taken.
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="focus:outline-none">
+    <div id="app">
+      <div class="flex min-h-[60vh] items-center justify-center" role="status"><span class="mp-spinner" aria-hidden="true"></span><span class="ml-3 text-gray-600">Loading the marketplace…</span></div>
+    </div>
+    <noscript>
+      <div class="mx-auto max-w-2xl px-4 py-16 text-center">
+        <h1 class="text-2xl font-bold text-emerald-900">Please enable JavaScript</h1>
+        <p class="mt-2 text-gray-600">The Chitenge Marketplace needs JavaScript to run. You can still visit the <a class="font-semibold text-emerald-800 underline" href="../">ZOCF website</a>.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="mt-20 bg-gray-900 text-gray-400">
+    <div class="mp-band h-3" aria-hidden="true"></div>
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-12 lg:px-8">
+      <div class="md:col-span-5">
+        <p class="text-lg font-extrabold text-white">ZOCF Chitenge Marketplace</p>
+        <p class="mt-1 font-medium text-amber-300">Celebrating Zambian Culture Through Fashion, Textiles and Enterprise.</p>
+        <p class="mt-4 max-w-md text-sm leading-relaxed">A community initiative of the Zambia Overseas Christian Fellowship, connecting Zambian and African sellers with the diaspora. This is a Stage 1 demonstration: products and sellers are fictional.</p>
+      </div>
+      <nav class="md:col-span-3" aria-label="Marketplace footer">
+        <h2 class="text-sm font-semibold uppercase tracking-widest text-white">Marketplace</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="#/catalogue" class="hover:text-amber-300">Browse the catalogue</a></li>
+          <li><a href="#/inspiration" class="hover:text-amber-300">Inspiration Gallery</a></li>
+          <li><a href="#/discover" class="hover:text-amber-300">AI Discovery (demo)</a></li>
+          <li><a href="#/sellers" class="hover:text-amber-300">Become a seller</a></li>
+          <li><a href="#/dashboard" class="hover:text-amber-300">Seller dashboard (concept)</a></li>
+        </ul>
+      </nav>
+      <nav class="md:col-span-4" aria-label="ZOCF website">
+        <h2 class="text-sm font-semibold uppercase tracking-widest text-white">ZOCF</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="../" class="hover:text-amber-300">ZOCF home</a></li>
+          <li><a href="../#about" class="hover:text-amber-300">About us</a></li>
+          <li><a href="../#events" class="hover:text-amber-300">Events &amp; schedule</a></li>
+          <li><a href="../#join" class="hover:text-amber-300">Become a member</a></li>
+          <li><a href="mailto:contact@zocf.org" class="hover:text-amber-300">contact@zocf.org</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm sm:flex-row sm:px-6 lg:px-8">
+        <p>&copy; <span id="year">2026</span> Zambia Overseas Christian Fellowship (ZOCF).</p>
+        <p class="flex items-center gap-2">
+          <span class="inline-flex h-2 w-8 overflow-hidden rounded-full" aria-hidden="true"><span class="flex-1 bg-emerald-600"></span><span class="flex-1 bg-red-600"></span><span class="flex-1 bg-black"></span><span class="flex-1 bg-orange-500"></span></span>
+          One Zambia, One Nation
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toastRegion" class="pointer-events-none fixed inset-x-0 bottom-4 z-[70] flex flex-col items-center gap-2 px-4 sm:items-end sm:px-6" aria-live="polite" aria-atomic="false"></div>
+</body>
+</html>

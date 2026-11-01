@@ -1,0 +1,10 @@
+[
+  { "id": "traditional", "name": "Traditional Zambian Chitenge", "shortName": "Traditional", "description": "Heritage motifs and colours worn at ceremonies, church and family gatherings.", "image": "images/categories/traditional.svg" },
+  { "id": "modern", "name": "Modern African Prints", "shortName": "Modern", "description": "Contemporary wax prints and bold, fashion-forward designs.", "image": "images/categories/modern.svg" },
+  { "id": "wedding", "name": "Wedding and Celebration Fabrics", "shortName": "Wedding & Celebration", "description": "Statement fabrics for kitchen parties, weddings and matching family outfits.", "image": "images/categories/wedding.svg" },
+  { "id": "floral", "name": "Floral Patterns", "shortName": "Floral", "description": "Hibiscus, jacaranda and garden-inspired blooms in rich colour.", "image": "images/categories/floral.svg" },
+  { "id": "geometric", "name": "Geometric Patterns", "shortName": "Geometric", "description": "Diamonds, zigzags and repeating shapes with strong lines.", "image": "images/categories/geometric.svg" },
+  { "id": "children", "name": "Children's Fabrics", "shortName": "Children's", "description": "Playful, cheerful prints sized and priced for little outfits.", "image": "images/categories/children.svg" },
+  { "id": "premium", "name": "Premium and Designer Fabrics", "shortName": "Premium & Designer", "description": "Limited runs, heavier cloth and designer collaborations.", "image": "images/categories/premium.svg" },
+  { "id": "other", "name": "Other African Textiles", "shortName": "Other Textiles", "description": "Prints inspired by textile traditions from across the continent.", "image": "images/categories/other.svg" }
+]
