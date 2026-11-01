@@ -1,7 +1,7 @@
-// Minimal hash router: #/path/segments?query. Hash routing needs no server configuration, so
+// Minimal hash router: #/path/segments?query. Shared by the Marketplace and NextGen apps. Hash routing needs no server configuration, so
 // every route works on GitHub Pages under /zocf-org/marketplace/ and survives a page refresh.
 
-export function createRouter({ routes, root, notFound, onChange }) {
+export function createRouter({ routes, root, notFound, onChange, titleSuffix = 'ZOCF Chitenge Marketplace' }) {
   const compiled = routes.map((r) => ({
     ...r,
     regex: new RegExp('^' + r.path.replace(/:(\w+)/g, '(?<$1>[^/]+)') + '/?$'),
@@ -33,7 +33,7 @@ export function createRouter({ routes, root, notFound, onChange }) {
     const ctx = {
       path, query, params: match?.params || {},
       isCurrent: () => token === navToken,
-      setTitle: (t) => { if (token === navToken) document.title = `${t} | ZOCF Chitenge Marketplace`; },
+      setTitle: (t) => { if (token === navToken) document.title = `${t} | ${titleSuffix}`; },
       // Update the query string without re-rendering (filters, search box).
       replaceQuery(params) {
         const qs = new URLSearchParams(Object.entries(params).filter(([, v]) => v !== '' && v != null)).toString();

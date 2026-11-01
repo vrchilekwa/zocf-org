@@ -1,0 +1,68 @@
+/* ZOCF NextGen – styles beyond Tailwind utilities.
+   Identity: deep indigo + sunset orange/rose, with ZOCF emerald accents. Patterns kept minimal. */
+
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+[id] { scroll-margin-top: 8rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+.ng-gradient-text {
+  background: linear-gradient(90deg, #f97316, #f43f5e);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Navigation */
+.ng-navlink { display: inline-block; white-space: nowrap; border-radius: 9999px; padding: .5rem .8rem; transition: background-color .15s, color .15s; }
+.ng-navlink:hover { background: #eef2ff; color: #1e1b4b; }
+.ng-navlink[aria-current="page"] { background: #1e1b4b; color: #fff; }
+.ng-mobilelink { display: block; border-radius: .9rem; padding: .7rem .9rem; }
+.ng-mobilelink:hover, .ng-mobilelink[aria-current="page"] { background: #eef2ff; color: #1e1b4b; }
+
+/* Hero */
+.ng-hero-bg {
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(249,115,22,.35), transparent 60%),
+    radial-gradient(40rem 30rem at -10% 110%, rgba(16,185,129,.25), transparent 60%),
+    #1e1b4b;
+}
+/* A single, subtle chitenge-inspired accent line (kept light on purpose) */
+.ng-accent-dots {
+  background-image: radial-gradient(rgba(255,255,255,.12) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+/* Cards: gentle entrance animation */
+.ng-fade-in { animation: ng-fade .45s ease-out both; }
+@keyframes ng-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* Loading */
+.ng-skeleton {
+  background: linear-gradient(90deg, #f1edf9 0%, #faf8ff 50%, #f1edf9 100%);
+  background-size: 200% 100%;
+  animation: ng-shimmer 1.3s ease-in-out infinite;
+}
+@keyframes ng-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.ng-spinner {
+  width: 1.75rem; height: 1.75rem; border-radius: 9999px;
+  border: 3px solid #e0e7ff; border-top-color: #f97316;
+  animation: ng-spin .8s linear infinite;
+}
+@keyframes ng-spin { to { transform: rotate(360deg); } }
+
+.ng-toast { animation: ng-fade .2s ease-out; transition: opacity .2s; }
+
+/* Image fallback (applied when an image fails to load) */
+.ng-img-fallback {
+  background: linear-gradient(135deg, #fed7aa, #fb7185 55%, #6366f1);
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 2px;
+}
+dialog[open] { animation: ng-fade .2s ease-out; }

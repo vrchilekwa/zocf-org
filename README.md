@@ -68,3 +68,45 @@ marketplace/
 - **Claude API:** add a provider to `js/services/aiDiscoveryService.js` that calls the ZOCF backend, which calls Claude server-side. Never put an API key in this repository or in browser code. The provider contract is documented at the top of that file.
 - **Pinterest:** add a provider to `js/services/inspirationService.js` that uses the official Pinterest API through the backend, with attribution. Do not scrape or re-host images.
 - **Images:** product images are illustrative pattern renders. Replace the `images` URLs with real product photos when sellers upload them.
+
+---
+
+## ZOCF NextGen (Stage 1, preview)
+
+*Connecting Our Next Generation.* A community platform for young Zambians (about 18–30) across the diaspora, in `nextgen/`. It is linked from the main site's navigation, footer and the "ZOCF NextGen" feature card (**MEET NEXTGEN**). It follows the marketplace's approach: no build step, ES modules, Tailwind via CDN, and hash routes, so it works under `/zocf-org/nextgen/`. It reuses the marketplace's router and safe-HTML helper.
+
+**Everything is fictional demonstration data.** No real member information, contact details or accounts exist.
+
+### Pages
+| Route | Page |
+|---|---|
+| `#/` | Landing page: hero, objectives, community teaser, activities, opportunities, stories, ambassadors, how to join |
+| `#/community`, `#/community/<id>` | Member directory and profile pages *(members only)* |
+| `#/connections` | Find Connections: interest tiles, search, filters for location (with nearby areas), age group, interest, education, career and preferred activities *(members only)* |
+| `#/activities`, `#/activities/<id>` | Activities with category and region filters, plus "I'm interested" (saved in `localStorage`) |
+| `#/opportunities` | Opportunities with category filter, search, and a demo "share an opportunity" form showing the pending-review flow |
+| `#/stories`, `#/stories/<id>` | Community stories |
+| `#/ambassadors` | Regional ambassador cards (none appointed) with a demo expression-of-interest form |
+| `#/join` | Membership request form (demo; nothing is sent) |
+| `#/guidelines`, `#/privacy` | Community guidelines, moderation concept, draft privacy notice |
+| `#/dashboard` | Member dashboard concept *(members only)* |
+
+### Public visitor vs member preview
+By default you see NextGen as a **public visitor**: member-only pages show a "members only" screen. The **"Viewing as"** switch in the header turns on a **member preview** using fictional profiles so the design can be reviewed. This switch is **not security**. Anything in `nextgen/data/` is publicly downloadable, so it must never contain real member data. In Stage 2 the FastAPI backend must authenticate users, check they are approved members (role-based access) and return only the fields each member has chosen to share.
+
+### Images
+All images are original illustrations from `nextgen/tools/generate-illustrations.mjs`. Profiles use illustrated avatars, so no real person's likeness is attached to a fictional profile. To use photographs, add licensed or consented photos to `nextgen/images/photos/` and update the `image` / `profileImage` paths in `nextgen/data/*.json`. Missing images fall back to a soft gradient automatically.
+
+### Code layout
+```
+nextgen/
+  index.html, css/nextgen.css
+  data/*.json              members (14), activities (12), opportunities (10), stories (6), regions (7), taxonomy, announcements
+  js/app.js                routes, header, access switch, interest buttons, image fallback
+  js/data/                 api.js (fetching), memberQuery.js (pure search, nearby and suggestion logic)
+  js/services/             dataService (all data access), interestService (localStorage), accessService (demo view mode)
+  js/components/           ui.js (shared UI), cards.js (member/activity/opportunity/story/region), memberGate.js
+  js/views/                one module per page
+  tools/generate-illustrations.mjs
+```
+Local development and deployment are the same as for the marketplace (see above). Open `http://localhost:8000/zocf-org/nextgen/`.

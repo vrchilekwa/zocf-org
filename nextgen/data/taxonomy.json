@@ -1,0 +1,61 @@
+{
+  "interests": [
+    { "id": "technology", "name": "Technology and Computing", "emoji": "💻" },
+    { "id": "healthcare", "name": "Medicine and Healthcare", "emoji": "🩺" },
+    { "id": "engineering", "name": "Engineering", "emoji": "⚙️" },
+    { "id": "business", "name": "Business and Entrepreneurship", "emoji": "📈" },
+    { "id": "education", "name": "Education and Academia", "emoji": "🎓" },
+    { "id": "sports", "name": "Sports and Fitness", "emoji": "⚽" },
+    { "id": "music", "name": "Music and Entertainment", "emoji": "🎵" },
+    { "id": "travel", "name": "Travel and Adventure", "emoji": "✈️" },
+    { "id": "volunteering", "name": "Volunteering and Community Service", "emoji": "🤝" },
+    { "id": "fashion", "name": "Fashion and Creativity", "emoji": "🎨" },
+    { "id": "leadership", "name": "Leadership and Personal Development", "emoji": "🌱" },
+    { "id": "arts", "name": "Arts and Culture", "emoji": "🥁" }
+  ],
+  "activityCategories": [
+    { "id": "social", "name": "Social gatherings" },
+    { "id": "sports", "name": "Sports and fitness" },
+    { "id": "football", "name": "Football" },
+    { "id": "basketball", "name": "Basketball" },
+    { "id": "hiking", "name": "Hiking and outdoor activities" },
+    { "id": "cycling", "name": "Cycling" },
+    { "id": "travel", "name": "Travel and adventure" },
+    { "id": "culture", "name": "Cultural celebrations" },
+    { "id": "networking", "name": "Career networking" },
+    { "id": "volunteering", "name": "Volunteering" },
+    { "id": "skills", "name": "Skills development" },
+    { "id": "outreach", "name": "Community outreach" }
+  ],
+  "opportunityCategories": [
+    { "id": "graduate", "name": "Graduate opportunities" },
+    { "id": "internship", "name": "Internships" },
+    { "id": "apprenticeship", "name": "Apprenticeships" },
+    { "id": "mentoring", "name": "Mentoring" },
+    { "id": "business", "name": "Business opportunities" },
+    { "id": "volunteering", "name": "Volunteering" },
+    { "id": "professional-development", "name": "Professional development" },
+    { "id": "education", "name": "Educational opportunities" },
+    { "id": "scholarship", "name": "Scholarships" },
+    { "id": "leadership", "name": "Leadership development" }
+  ],
+  "ageGroups": ["18–21", "22–25", "26–30"],
+  "educationLevels": ["College / sixth form", "University (undergraduate)", "Postgraduate", "Apprenticeship", "Graduate / working"],
+  "careerFields": ["Student", "Technology", "Healthcare", "Engineering", "Business", "Education", "Creative industries", "Data and analytics"],
+  "locations": [
+    { "id": "derby", "name": "Derby", "region": "Derby and Nottingham", "country": "UK", "nearby": ["nottingham", "leicester", "birmingham"] },
+    { "id": "nottingham", "name": "Nottingham", "region": "Derby and Nottingham", "country": "UK", "nearby": ["derby", "leicester", "birmingham"] },
+    { "id": "leicester", "name": "Leicester", "region": "Birmingham and Midlands", "country": "UK", "nearby": ["derby", "nottingham", "birmingham", "coventry"] },
+    { "id": "birmingham", "name": "Birmingham", "region": "Birmingham and Midlands", "country": "UK", "nearby": ["coventry", "leicester", "derby", "nottingham"] },
+    { "id": "coventry", "name": "Coventry", "region": "Birmingham and Midlands", "country": "UK", "nearby": ["birmingham", "leicester"] },
+    { "id": "london", "name": "London", "region": "London and South East", "country": "UK", "nearby": ["reading"] },
+    { "id": "reading", "name": "Reading", "region": "London and South East", "country": "UK", "nearby": ["london"] },
+    { "id": "manchester", "name": "Manchester", "region": "Manchester and North West", "country": "UK", "nearby": ["leeds"] },
+    { "id": "leeds", "name": "Leeds", "region": "Manchester and North West", "country": "UK", "nearby": ["manchester"] },
+    { "id": "glasgow", "name": "Glasgow", "region": "Scotland", "country": "UK", "nearby": ["edinburgh"] },
+    { "id": "edinburgh", "name": "Edinburgh", "region": "Scotland", "country": "UK", "nearby": ["glasgow"] },
+    { "id": "cardiff", "name": "Cardiff", "region": "Wales", "country": "UK", "nearby": [] },
+    { "id": "dublin", "name": "Dublin", "region": "Other diaspora locations", "country": "Ireland", "nearby": [] },
+    { "id": "toronto", "name": "Toronto", "region": "Other diaspora locations", "country": "Canada", "nearby": [] }
+  ]
+}

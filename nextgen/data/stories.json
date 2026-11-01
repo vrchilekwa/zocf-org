@@ -1,0 +1,56 @@
+[
+  {
+    "id": "first-in-family-graduate", "title": "First in my family to graduate", "category": "graduation", "authorDisplayName": "Chanda (fictional)", "image": "images/scenes/graduation.svg", "datePublished": "2026-07-20", "status": "published", "isDemo": true,
+    "description": "From late-night library sessions to walking across the stage in Leicester, this is a story about the community that cheered me on.",
+    "body": [
+      "When I arrived in the UK at eighteen, I did not know anyone in my city. A ZOCF prayer call connected me with another Zambian student two streets away, and that friendship carried me through three years of exams.",
+      "Graduation day felt like a family celebration, even though most of my family were watching on a video call from Lusaka. Members I had only met a few times turned up with flowers and chitenge outfits.",
+      "My advice to anyone starting out: find your people early. You do not have to do it alone."
+    ]
+  },
+  {
+    "id": "from-kitchen-to-catering", "title": "From my kitchen to a catering business", "category": "business", "authorDisplayName": "Nchimunya (fictional)", "image": "images/scenes/business.svg", "datePublished": "2026-09-02", "status": "published", "isDemo": true,
+    "description": "How cooking for church events turned into a small Zambian catering company, and what I learned about starting a business.",
+    "body": [
+      "It started with cooking nshima and ifisashi for fellowship gatherings. People kept asking whether I could cater their parties.",
+      "I took a free business course, registered my company and found a mentor through the community. The first year was hard, but every event taught me something.",
+      "If you have an idea, start small and ask for help. Our community is full of people who want you to succeed."
+    ]
+  },
+  {
+    "id": "landing-my-tech-job", "title": "Landing my first tech job", "category": "career", "authorDisplayName": "Kondwani (fictional)", "image": "images/scenes/skills.svg", "datePublished": "2026-05-11", "status": "published", "isDemo": true,
+    "description": "Fifty applications, three interviews and one yes. What helped me break into software engineering.",
+    "body": [
+      "I switched from a maths degree to software engineering through evening courses and a lot of practice projects.",
+      "Mock interviews with other young professionals made the biggest difference. They told me honestly where I was going wrong.",
+      "Now I run a small coding club so others can get the same support."
+    ]
+  },
+  {
+    "id": "food-bank-saturdays", "title": "Saturdays at the food bank", "category": "volunteering", "authorDisplayName": "Thandiwe (fictional)", "image": "images/scenes/volunteering.svg", "datePublished": "2026-03-28", "status": "published", "isDemo": true,
+    "description": "What started as a one-off volunteering day became a monthly tradition for a group of young members in Manchester.",
+    "body": [
+      "Six of us signed up for one Saturday. Now there are fifteen of us, and the food bank team know us by name.",
+      "Serving together has built friendships faster than any social event. You learn a lot about someone while packing two hundred food parcels.",
+      "Anyone can join: no experience needed, just a willing heart."
+    ]
+  },
+  {
+    "id": "independence-day-dance", "title": "Teaching traditional dance on Independence Day", "category": "culture", "authorDisplayName": "Bupe (fictional)", "image": "images/scenes/culture.svg", "datePublished": "2026-10-26", "status": "published", "isDemo": true,
+    "description": "Young members led the dance workshop at this year's Independence celebration, and the children did not want it to end.",
+    "body": [
+      "Our grandmothers taught us these dances. This year we taught them to children born in the UK, Ireland and Canada.",
+      "Seeing kids in chitenge wraps learning moves from home was one of the proudest moments of my year.",
+      "Culture stays alive when we share it, and NextGen gives us the space to do that."
+    ]
+  },
+  {
+    "id": "highlands-hike", "title": "Our first NextGen hike in the Highlands", "category": "personal-development", "authorDisplayName": "Mutale (fictional)", "image": "images/scenes/hiking.svg", "datePublished": "2026-08-15", "status": "published", "isDemo": true,
+    "description": "Eight people, one mountain and a lot of laughter. Why getting outdoors together matters.",
+    "body": [
+      "Most of the group had never climbed a mountain. We took it slowly, shared snacks and stopped for plenty of photos.",
+      "At the top, someone started singing a Zambian worship song and everyone joined in. It is a memory I will keep for a long time.",
+      "Next time we are aiming for two mountains. Who is coming?"
+    ]
+  }
+]
