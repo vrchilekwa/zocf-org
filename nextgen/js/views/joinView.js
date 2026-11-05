@@ -38,7 +38,7 @@ export async function joinView(root, ctx) {
               <select id="j-loc" name="location" required class="${inputCls} h-11 py-0"><option value="">Choose your nearest city</option>${lookups.locations.map((l) => html`<option value="${l.id}">${l.name}${l.country !== 'UK' ? `, ${l.country}` : ''}</option>`)}<option value="other">Somewhere else</option></select>${errorSlot('location')}</div>
           </div>
           <div class="rounded-2xl bg-slate-50 p-4">
-            <label class="flex items-start gap-3 text-sm text-slate-800"><input type="checkbox" name="age" required class="mt-0.5 h-5 w-5 rounded border-slate-300 text-orange-500 focus:ring-orange-400" /> <span>I confirm I am aged between 18 and 30. <span class="block text-xs text-slate-500">Final eligibility will be confirmed by ZOCF.</span></span></label>
+            <label class="flex items-start gap-3 text-sm text-slate-800"><input type="checkbox" name="age" required class="mt-0.5 h-5 w-5 rounded border-slate-300 text-orange-500 focus:ring-orange-400" /> <span>I confirm I am aged between 18 and 40. <span class="block text-xs text-slate-500">Final eligibility will be confirmed by ZOCF.</span></span></label>
             ${errorSlot('age')}
           </div>
           <div><label for="j-intro" class="${labelCls}">Short introduction</label><textarea id="j-intro" name="introduction" required minlength="20" maxlength="500" rows="3" class="${inputCls}" placeholder="A little about you: studies, work, what you enjoy…"></textarea><p class="mt-1 text-xs text-slate-500">20–500 characters.</p>${errorSlot('introduction')}</div>

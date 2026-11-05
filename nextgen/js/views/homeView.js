@@ -19,7 +19,7 @@ function hero() {
     <div class="ng-accent-dots absolute inset-0 opacity-50" aria-hidden="true"></div>
     <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
       <div>
-        <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-orange-300 ring-1 ring-white/15">ZOCF NextGen · ages 18–30</p>
+        <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-orange-300 ring-1 ring-white/15">ZOCF NextGen · ages 18–40</p>
         <h1 id="ngHeroTitle" class="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">WELCOME TO ZOCF <span class="ng-gradient-text">NEXTGEN</span></h1>
         <p class="mt-3 font-display text-xl font-bold text-orange-200 sm:text-2xl">Connecting Our Next Generation.</p>
         <div class="mt-5 space-y-3 text-lg leading-relaxed text-indigo-100">
@@ -141,7 +141,7 @@ export async function homeView(root, ctx) {
         </div>
         <a href="#/join" class="${btn.primary} shrink-0 px-8 py-3 text-lg">Join NextGen</a>
       </div>
-      <p class="mt-6 text-center text-sm text-slate-500">${chip('Eligibility', 'slate')} NextGen is aimed at young adults aged roughly 18–30, subject to ZOCF confirming final membership eligibility.</p>
+      <p class="mt-6 text-center text-sm text-slate-500">${chip('Eligibility', 'slate')} NextGen is aimed at young adults aged roughly 18–40, subject to ZOCF confirming final membership eligibility.</p>
     </section>
   </div>`);
 }

@@ -73,7 +73,7 @@ marketplace/
 
 ## ZOCF NextGen (Stage 1, preview)
 
-*Connecting Our Next Generation.* A community platform for young Zambians (about 18–30) across the diaspora, in `nextgen/`. It is linked from the main site's navigation, footer and the "ZOCF NextGen" feature card (**MEET NEXTGEN**). It follows the marketplace's approach: no build step, ES modules, Tailwind via CDN, and hash routes, so it works under `/zocf-org/nextgen/`. It reuses the marketplace's router and safe-HTML helper.
+*Connecting Our Next Generation.* A community platform for young Zambians (about 18–40) across the diaspora, in `nextgen/`. It is linked from the main site's navigation, footer and the "ZOCF NextGen" feature card (**MEET NEXTGEN**). It follows the marketplace's approach: no build step, ES modules, Tailwind via CDN, and hash routes, so it works under `/zocf-org/nextgen/`. It reuses the marketplace's router and safe-HTML helper.
 
 **Everything is fictional demonstration data.** No real member information, contact details or accounts exist.
 
