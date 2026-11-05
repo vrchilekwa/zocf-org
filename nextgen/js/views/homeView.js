@@ -1,4 +1,4 @@
-import { html, render, icons, btn, img, sectionHeading, loadingCards, showError, chip } from '../components/ui.js';
+import { html, render, icons, btn, sectionHeading, loadingCards, showError, chip } from '../components/ui.js';
 import { activityCard, storyCard, opportunityCard } from '../components/cards.js';
 import { getLookups, getUpcomingActivities, getStories, getOpportunities, getMembers, getRegions } from '../services/dataService.js';
 
@@ -34,8 +34,21 @@ function hero() {
       </div>
       <div class="relative">
         <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-orange-500/40 to-rose-500/30 blur-2xl" aria-hidden="true"></div>
-        ${img('images/scenes/hero-community.svg', 'Illustration of a diverse group of young African adults celebrating together', 'relative aspect-[3/2] w-full rounded-[2rem] object-cover shadow-2xl ring-4 ring-white/10')}
-        <div class="absolute -bottom-5 left-5 hidden rounded-2xl bg-white px-4 py-3 text-indigo-950 shadow-xl sm:block">
+        <!-- NextGen video (YouTube: https://youtu.be/ipUjEtiDQeE).
+             To change it, replace ipUjEtiDQeE below with the new video's 11-character ID. -->
+        <div class="relative overflow-hidden rounded-[2rem] bg-black shadow-2xl ring-4 ring-white/10">
+          <div class="relative aspect-video w-full">
+            <iframe class="absolute inset-0 h-full w-full"
+                    src="https://www.youtube.com/embed/ipUjEtiDQeE?rel=0"
+                    title="Welcome to ZOCF NextGen"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    loading="lazy"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="relative mt-4 hidden rounded-2xl bg-white px-4 py-3 text-indigo-950 shadow-xl sm:inline-block">
           <p class="text-xs font-semibold text-slate-500">Across the diaspora</p>
           <p class="font-display text-lg font-extrabold">UK · Ireland · Canada · beyond</p>
         </div>
