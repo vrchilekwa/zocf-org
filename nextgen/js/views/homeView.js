@@ -34,12 +34,12 @@ function hero() {
       </div>
       <div class="relative">
         <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-orange-500/40 to-rose-500/30 blur-2xl" aria-hidden="true"></div>
-        <!-- NextGen video (YouTube: https://youtu.be/ipUjEtiDQeE).
-             To change it, replace ipUjEtiDQeE below with the new video's 11-character ID. -->
+        <!-- NextGen video (YouTube: https://youtu.be/1IZU1hy_Jps).
+             To change it, replace 1IZU1hy_Jps below with the new video's 11-character ID. -->
         <div class="relative overflow-hidden rounded-[2rem] bg-black shadow-2xl ring-4 ring-white/10">
           <div class="relative aspect-video w-full">
             <iframe class="absolute inset-0 h-full w-full"
-                    src="https://www.youtube.com/embed/ipUjEtiDQeE?rel=0"
+                    src="https://www.youtube.com/embed/1IZU1hy_Jps?rel=0"
                     title="Welcome to ZOCF NextGen"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
