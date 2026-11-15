@@ -49,7 +49,7 @@ export async function sellersView(root, ctx) {
           </div>
         </div>
         <div class="grid grid-cols-3 gap-3" aria-hidden="true">
-          ${products.slice(0, 6).map((p, i) => html`<img src="${p.images[2]}" alt="" class="aspect-[3/4] w-full rounded-2xl object-cover shadow-xl ${i % 2 ? 'translate-y-6' : ''}" />`)}
+          ${products.slice(0, 6).map((p, i) => html`<img src="${p.images[2] || p.images[0]}" alt="" class="aspect-[3/4] w-full rounded-2xl object-cover shadow-xl ${i % 2 ? 'translate-y-6' : ''}" />`)}
         </div>
       </div>
     </section>

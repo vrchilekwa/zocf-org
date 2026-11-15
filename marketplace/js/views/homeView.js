@@ -44,12 +44,20 @@ function popularPatterns(products) {
   // Rank pattern styles by the combined popularity of the fabrics that use them.
   const totals = new Map();
   for (const p of products) for (const pat of p.patterns) {
-    const t = totals.get(pat) || { pattern: pat, score: 0, example: p };
+    const t = totals.get(pat) || { pattern: pat, score: 0 };
     t.score += p.popularity;
-    if (p.popularity > t.example.popularity) t.example = p;
     totals.set(pat, t);
   }
-  return [...totals.values()].sort((a, b) => b.score - a.score).slice(0, 6);
+  const top = [...totals.values()].sort((a, b) => b.score - a.score).slice(0, 6);
+  // Give each pattern its own example fabric (the most popular one not already shown).
+  const used = new Set();
+  const byPopularity = [...products].sort((a, b) => b.popularity - a.popularity);
+  for (const t of top) {
+    const withPattern = byPopularity.filter((p) => p.patterns.includes(t.pattern));
+    t.example = withPattern.find((p) => !used.has(p.id)) || withPattern[0];
+    used.add(t.example.id);
+  }
+  return top;
 }
 
 function body({ categories, categoryPhotos = [], counts, featured, recent, popular, patterns, inspiration, names }) {
@@ -98,7 +106,7 @@ function body({ categories, categoryPhotos = [], counts, featured, recent, popul
           <ul class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6" role="list">
             ${patterns.map(({ pattern, example }) => html`<li>
               <a href="#/catalogue?pattern=${encodeURIComponent(pattern)}" class="group block overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 transition hover:-translate-y-1 hover:ring-amber-400">
-                <img src="${example.images[1]}" alt="" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
+                <img src="${example.images[1] || example.images[0]}" alt="" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
                 <span class="block px-3 py-2.5 text-sm font-bold capitalize">${pattern}</span>
               </a></li>`)}
           </ul>
@@ -134,7 +142,7 @@ function body({ categories, categoryPhotos = [], counts, featured, recent, popul
           </div>
         </div>
         <div class="grid grid-cols-3 gap-3" aria-hidden="true">
-          ${featured.slice(0, 6).map((p, i) => html`<img src="${p.images[2]}" alt="" loading="lazy" class="aspect-[3/4] w-full rounded-2xl object-cover shadow-md ${i % 2 ? 'translate-y-6' : ''}" />`)}
+          ${featured.slice(0, 6).map((p, i) => html`<img src="${p.images[2] || p.images[0]}" alt="" loading="lazy" class="aspect-[3/4] w-full rounded-2xl object-cover shadow-md ${i % 2 ? 'translate-y-6' : ''}" />`)}
         </div>
       </section>
 
