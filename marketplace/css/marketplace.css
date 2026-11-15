@@ -52,7 +52,7 @@ img { max-width: 100%; }
 /* Hero */
 .mp-hero {
   background-color: #022c22;
-  background-image: url('../images/hero-fabrics.svg');
+  background-image: url('../images/hero-fabrics.jpg');
   background-size: cover;
   background-position: 70% center;
 }
