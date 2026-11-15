@@ -52,15 +52,23 @@ function popularPatterns(products) {
   return [...totals.values()].sort((a, b) => b.score - a.score).slice(0, 6);
 }
 
-function body({ categories, counts, featured, recent, popular, patterns, inspiration, names }) {
+function body({ categories, categoryPhotos = [], counts, featured, recent, popular, patterns, inspiration, names }) {
   return html`
     <div class="mx-auto max-w-7xl space-y-24 px-4 py-16 sm:px-6 lg:px-8">
 
       <section aria-labelledby="catTitle">
-        ${sectionHeading({ eyebrow: 'Shop by style', title: 'Featured categories', id: 'catTitle', text: 'From heritage chitenge to designer prints, choose a style to see matching materials.', link: { href: '#/catalogue', label: 'View all materials' } })}
-        <ul class="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4" role="list">
-          ${categories.map((c) => html`<li>${categoryCard(c, counts[c.id] || 0)}</li>`)}
-        </ul>
+        ${sectionHeading({ eyebrow: 'Shop by style', title: 'Featured categories', id: 'catTitle', text: 'Celebrate Zambia in the national colours of green, red, black and orange.', link: { href: '#/catalogue', label: 'View all materials' } })}
+        ${categories.length === 1
+          ? html`<div class="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+              <div class="col-span-2 lg:row-span-2 [&>a]:h-full [&>a]:aspect-auto [&>a]:min-h-[16rem]">${categoryCard(categories[0], counts[categories[0].id] || 0)}</div>
+              ${categoryPhotos.map((p) => html`<a href="#/product/${encodeURIComponent(p.id)}" class="group relative block aspect-square overflow-hidden rounded-2xl bg-emerald-950 shadow-md ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400">
+                <img src="${p.images[0]}" alt="${p.name}" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-xs font-semibold text-white">${p.name}</span>
+              </a>`)}
+            </div>`
+          : html`<ul class="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4" role="list">
+              ${categories.map((c) => html`<li>${categoryCard(c, counts[c.id] || 0)}</li>`)}
+            </ul>`}
       </section>
 
       <section aria-labelledby="featTitle">
@@ -163,7 +171,9 @@ export async function homeView(root, ctx) {
       getProducts(), getCategories(), getCategoryNames(), getFeaturedProducts(6), getRecentProducts(4), getPopularProducts(4), getInspiration(),
     ]);
     const counts = products.reduce((acc, p) => ({ ...acc, [p.category]: (acc[p.category] || 0) + 1 }), {});
-    data = { categories, counts, featured, recent, popular, patterns: popularPatterns(products), inspiration, names };
+    // With a single category, show a few of its listings beside the category card.
+    const categoryPhotos = categories.length === 1 ? products.filter((p) => p.category === categories[0].id && !p.featured).slice(0, 4) : [];
+    data = { categories, categoryPhotos, counts, featured, recent, popular, patterns: popularPatterns(products), inspiration, names };
   } catch (err) {
     if (!ctx.isCurrent()) return;
     render(root, html`${hero()}<div class="mx-auto max-w-3xl px-4 py-16">${errorState(err.message)}</div>`);

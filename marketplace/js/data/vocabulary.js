@@ -38,14 +38,7 @@ export const PATTERN_SYNONYMS = {
 };
 
 export const CATEGORY_SYNONYMS = {
-  traditional: ['traditional', 'heritage', 'classic', 'ceremony', 'ceremonial', 'zambian', 'independence'],
-  modern: ['modern', 'contemporary', 'fashion', 'trendy', 'stylish', 'wax'],
-  wedding: ['wedding', 'weddings', 'celebration', 'celebrations', 'party', 'kitchen', 'bride', 'bridal', 'engagement', 'anniversary'],
-  floral: ['floral', 'flowers', 'flower'],
-  geometric: ['geometric', 'geometry'],
-  children: ['children', 'childrens', 'child', 'kids', 'kid', 'baby', 'school', 'little'],
-  premium: ['premium', 'designer', 'luxury', 'luxurious', 'special', 'limited', 'sateen'],
-  other: ['mud', 'mudcloth', 'kente', 'strip', 'woven', 'west'],
+  independence: ['independence', 'zambia', 'zambian', 'national', 'flag', 'patriotic', 'october', 'heritage', 'traditional', 'celebration', 'celebrations', 'ceremony'],
 };
 
 export const STOP_WORDS = new Set([
